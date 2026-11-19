@@ -1,0 +1,537 @@
+[
+  {
+    "check": "00_cell_analytical native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "01_midpoint_load native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "02_tia_calibration native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "03_healthy native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "04_gain_step native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "05_offset_step native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "06_frontend_slow native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "07_high_cdl native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "08_low_signal_noise native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "09_switch_disturbance native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "10_mixed_fault native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "11_ru_sweep native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "12_rp_sweep native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "13_cdl_sweep native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "14_known_resistance native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "15_gain_known_reference native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "16_noise_only native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "17_repeatability native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "18_nonlinear_challenge native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "19_adc_filter_ac native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "20_tia_resistor_noise native engine and data",
+    "passed": true,
+    "detail": "Native LTspice log completed; waveform dimensions and finite values checked."
+  },
+  {
+    "check": "Ideal cell reference",
+    "passed": true,
+    "detail": "{'i_initial': [1e-06], 'i_steady': [9.09183e-08], 'tau_observed': [4.25344946519493e-07], 'tau_corrected': [0.909091], 'rdc': [109989.0]}"
+  },
+  {
+    "check": "Midpoint loaded and transient droop",
+    "passed": true,
+    "detail": "{'midpoint_loaded': [2.5], 'midpoint_min': [2.49815]}"
+  },
+  {
+    "check": "TIA polarity and transimpedance",
+    "passed": true,
+    "detail": "{'out_positive': [2.6], 'out_negative': [2.4], 'transimpedance': [999990.0]}"
+  },
+  {
+    "check": "03_healthy step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "03_healthy step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.56e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "03_healthy step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.508992 to 3.490977 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "04_gain_step step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "04_gain_step step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.54e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "04_gain_step step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.310893 to 3.689166 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "05_offset_step step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "05_offset_step step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.38e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "05_offset_step step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.514005 to 3.495977 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "06_frontend_slow step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "06_frontend_slow step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.28e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "06_frontend_slow step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 2.236414 to 2.763531 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "07_high_cdl step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 3.77e-10 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "07_high_cdl step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.04e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "07_high_cdl step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.158730 to 3.793778 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "08_low_signal_noise step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "08_low_signal_noise step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.32e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "08_low_signal_noise step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 2.401305 to 2.599916 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "09_switch_disturbance step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 3.55e-10 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "09_switch_disturbance step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.56e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "09_switch_disturbance step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.509005 to 3.490976 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "10_mixed_fault step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 3.77e-10 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "10_mixed_fault step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 4.61e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "10_mixed_fault step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 0.896612 to 4.057572 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "11_ru_sweep step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 1.38e-11 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "11_ru_sweep step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 4.19e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "11_ru_sweep step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 0.576060 to 4.423529 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "11_ru_sweep step 2: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "11_ru_sweep step 2: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.56e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "11_ru_sweep step 2: model output range",
+    "passed": true,
+    "detail": "ADC input 1.508992 to 3.490977 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "11_ru_sweep step 3: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 1.06e-11 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "11_ru_sweep step 3: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.1e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "11_ru_sweep step 3: model output range",
+    "passed": true,
+    "detail": "ADC input 1.990898 to 3.009099 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "12_rp_sweep step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.15e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "12_rp_sweep step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.37e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "12_rp_sweep step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.509603 to 3.490370 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "12_rp_sweep step 2: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "12_rp_sweep step 2: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.56e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "12_rp_sweep step 2: model output range",
+    "passed": true,
+    "detail": "ADC input 1.508992 to 3.490977 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "12_rp_sweep step 3: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 2.7e-11 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "12_rp_sweep step 3: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.29e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "12_rp_sweep step 3: model output range",
+    "passed": true,
+    "detail": "ADC input 1.508490 to 3.491481 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "13_cdl_sweep step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 1.69e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "13_cdl_sweep step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.17e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "13_cdl_sweep step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.566182 to 3.433937 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "13_cdl_sweep step 2: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "13_cdl_sweep step 2: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.56e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "13_cdl_sweep step 2: model output range",
+    "passed": true,
+    "detail": "ADC input 1.508992 to 3.490977 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "13_cdl_sweep step 3: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 3.77e-10 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "13_cdl_sweep step 3: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.04e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "13_cdl_sweep step 3: model output range",
+    "passed": true,
+    "detail": "ADC input 1.158730 to 3.793778 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "14_known_resistance step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 1.06e-13 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "14_known_resistance step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.22e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "14_known_resistance step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 2.409098 to 2.590897 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "15_gain_known_reference step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 1.17e-13 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "15_gain_known_reference step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.22e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "15_gain_known_reference step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 2.390918 to 2.609077 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "16_noise_only step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "16_noise_only step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.55e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "16_noise_only step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.510355 to 3.491507 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "17_repeatability step 1: cell KVL/current sign",
+    "passed": true,
+    "detail": "Max all-sample residual = 8.2e-12 A. Checked after first 1 us using 20 pA + 20 ppm of instantaneous current, accounting for stored float32 and solver tolerance."
+  },
+  {
+    "check": "17_repeatability step 1: ADC reconstruction",
+    "passed": true,
+    "detail": "Max reconstruction difference = 2.56e-13 A (RAW values are float32)"
+  },
+  {
+    "check": "17_repeatability step 1: model output range",
+    "passed": true,
+    "detail": "ADC input 1.508992 to 3.490977 V; only compared with modeled 5 V output limits."
+  },
+  {
+    "check": "Healthy resistance and voltage tracking",
+    "passed": true,
+    "detail": "{'epos': [0.00999909], 'eneg': [-0.00999909], 'ipos_true': [9.09039e-08], 'ineg_true': [-9.09039e-08], 'ipos_meas': [9.09004e-08], 'ineg_meas': [-9.09054e-08], 'rdc_true': [109996.0], 'rdc_meas': [109997.0], 'rp_meas': [99997.4], 'vmid_dc': [2.5], 'max_adc': [3.49098], 'min_adc': [1.50899]}"
+  },
+  {
+    "check": "20 percent gain fault response",
+    "passed": true,
+    "detail": "Resistance ratio = 0.833336; expected 0.833333"
+  },
+  {
+    "check": "Offset fault and slope cancellation",
+    "passed": true,
+    "detail": "Positive current shift=5e-09 A; two-polarity resistance unchanged."
+  },
+  {
+    "check": "Slow ADC filter produces settling bias",
+    "passed": true,
+    "detail": "Recovered Rp=96.402 kohm, despite correct true cell response: expected diagnostic failure."
+  },
+  {
+    "check": "High Cdl identified as unsettled",
+    "passed": true,
+    "detail": "Rp=15.2156 kohm in the 12 s window; invalid equilibrium estimate, not a 15k cell."
+  },
+  {
+    "check": "Drive disconnect timing",
+    "passed": true,
+    "detail": "Relay helper is zero during the intended 20 ms disconnect."
+  },
+  {
+    "check": "08_low_signal_noise finite noise response",
+    "passed": true,
+    "detail": "Settled measurement-error sample RMS about 0.9664 nA; adaptive-time sampled, not a precision bandwidth estimate."
+  },
+  {
+    "check": "16_noise_only finite noise response",
+    "passed": true,
+    "detail": "Settled measurement-error sample RMS about 0.9664 nA; adaptive-time sampled, not a precision bandwidth estimate."
+  },
+  {
+    "check": "Mixed faults give invalid equilibrium Rp",
+    "passed": true,
+    "detail": "Recovered Rp=11.0156 kohm under combined gain, offset, noise, and slow-cell fault."
+  },
+  {
+    "check": "Ru sweep follows expected DC dependence",
+    "passed": true,
+    "detail": "105001, 109997, 119380 ohm; the 20k Ru point retains 0.52% window settling bias."
+  },
+  {
+    "check": "Rp sweep recovered within 0.1 percent",
+    "passed": true,
+    "detail": "[50000.3, 99997.4, 199977.0]"
+  },
+  {
+    "check": "Cdl sweep distinguishes settled and unsettled",
+    "passed": true,
+    "detail": "[100001.0, 99997.4, 15215.6]"
+  },
+  {
+    "check": "Known resistance calibration",
+    "passed": true,
+    "detail": "Recovered Rdc=110001 ohm"
+  },
+  {
+    "check": "Gain identified with known resistor",
+    "passed": true,
+    "detail": "Recovered Rdc=91667.7 ohm"
+  },
+  {
+    "check": "Repeatability",
+    "passed": true,
+    "detail": "Max absolute waveform difference=0.0"
+  },
+  {
+    "check": "Nonlinear challenge trend",
+    "passed": true,
+    "detail": "[109984.0, 109484.0, 98602.5]"
+  },
+  {
+    "check": "ADC filter -3 dB corner",
+    "passed": true,
+    "detail": "159.158 Hz"
+  },
+  {
+    "check": "Resistor noise spectrum",
+    "passed": true,
+    "detail": "Max relative deviation from 4kTR/feedback transfer = 9.26e-06; low-f density=128.747 nV/sqrt(Hz)"
+  },
+  {
+    "check": "Drawn schematic 29 component connections",
+    "passed": true,
+    "detail": "[]"
+  },
+  {
+    "check": "Drawn schematic matches healthy measurements",
+    "passed": true,
+    "detail": "All 13 logged .meas results match the healthy netlist to printed precision."
+  }
+]

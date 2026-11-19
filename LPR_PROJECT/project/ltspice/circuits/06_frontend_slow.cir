@@ -1,0 +1,5 @@
+P1 06_frontend_slow: ADC filter settling fault tau=2.2s
+* Generated source case. Native LTspice execution has NOT occurred at delivery.
+.param RU=10k RP=100k CDL=100u AMP=10m RF=1Meg RADC=10k CADC=220u GAINSTEP=0 OFFSET=0 NOISE=0 SWFAULT=0
+.include ../models/electrical_core.inc
+.end

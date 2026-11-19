@@ -1,0 +1,32 @@
+[
+  {
+    "item": "Qualified P2 \u2192 P1/P3 Ru transfer",
+    "status": "CLOSED FOR PLANAR SIMULATION FIXTURE",
+    "evidence": "Five fresh native Elmer cases, conductivity and reference-position extraction, flux/energy agreement and mesh gates. Separate 3D specimen remains NOT QUALIFIED."
+  },
+  {
+    "item": "Reference and calibration evidence",
+    "status": "DEMONSTRATED IN NATIVE SIMULATION",
+    "evidence": "Independent switched resistor, signed training levels, independent holdouts and positive reference probes. Observable drive-off OCP remains a separate measurement."
+  },
+  {
+    "item": "Corrected Rp output",
+    "status": "DEMONSTRATED UNDER DECLARED MODEL",
+    "evidence": "Nominal Rapp 110000.581129 \u03a9; Ru 10000 \u03a9; Rp 100000.581129 \u03a9. Unchanged P3 correction gate."
+  },
+  {
+    "item": "End-to-end repeat feedback",
+    "status": "DEMONSTRATED IN NATIVE SIMULATION",
+    "evidence": "P3 request \u2192 fresh independent reference \u2192 fresh continuous-prefix simulation with 45 s/point retry. One-retry bound and exact prefix comparison enforced."
+  },
+  {
+    "item": "Integrated condition validation",
+    "status": "DEMONSTRATED IN BOUNDED MATRIX",
+    "evidence": "16 declared cases, 22 fresh native executions in the final matrix, healthy/fault/noise/conductivity/reference-position/timeout/reset coverage."
+  },
+  {
+    "item": "Comparative novelty evidence",
+    "status": "PRELIMINARY EQUAL-INPUT PILOT",
+    "evidence": "Three simple ungated estimators compared with P3 on identical native A1 observations. This is not proof of superiority over published instruments or algorithms."
+  }
+]

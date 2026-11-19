@@ -1,0 +1,2 @@
+* Additional probe nodes are saved for graphical exploration.
+.save V(actual_hold) V(i_meas) V(req) V(drive) V(point_code) V(reverse) V(nom_gain) V(adc_range) V(adc_rate) V(clock) V(state_code) V(sample_select) V(cal_role) V(attempt) V(reset) V(i_true) V(eta_truth) V(tia) V(vmid) V(adc_hold) V(adc) V(actual) V(ce) V(re) V(we) V(conditioned) V(cellmetal) V(surf) V(calmetal) V(metal) V(mid_raw) V(target) V(re_buf) V(drive_amp) V(cal_select) V(nunit) V(recovery_after) I(Vsense)

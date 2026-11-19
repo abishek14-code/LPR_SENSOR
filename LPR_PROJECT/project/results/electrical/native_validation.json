@@ -1,0 +1,149 @@
+[
+  {
+    "case": "00_cell_analytical",
+    "returncode": 0,
+    "seconds": 0.04831075668334961,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 ideal Ru + (Rp || Cdl) analytical reference test\nStart Time: Sun Sep 20 20:48:59 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nabstol = 1e-15\nreltol = 1e-06\nvolttol = 1e-09\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nWARNING: Less than two connections to node relay.  This node is used by brelay.\nDirect Newton iteration for .op point succeeded.\n\ni_initial: v(i_true)=1e-06 at 1\r\ni_steady: AVG(v(i_true))=9.09183e-08 FROM 11 TO 12\r\ntau_observed: v(i_true)=4.25344946519493e-07 AT 1.90909\r\ntau_corrected: tau_observed-1.000001=0.909091\r\nrdc: amp/i_steady=109989\r\n\nTotal elapsed time: 0.015 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "01_midpoint_load",
+    "returncode": 0,
+    "seconds": 0.07956290245056152,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 5V supply, 2.5V divider and buffered midpoint load-step test\nStart Time: Sun Sep 20 20:48:59 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nDirect Newton iteration for .op point succeeded.\n\nmidpoint_loaded: AVG(v(vmid))=2.5 FROM 0.15 TO 0.19\r\nmidpoint_min: MIN(v(vmid))=2.49815 FROM 0 TO 0.4\r\n\nTotal elapsed time: 0.053 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "02_tia_calibration",
+    "returncode": 0,
+    "seconds": 0.09570002555847168,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 TIA known positive/negative 100nA current calibration\nStart Time: Sun Sep 20 20:48:59 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nDirect Newton iteration for .op point succeeded.\n\nout_positive: AVG(v(tia))=2.6 FROM 0.25 TO 0.29\r\nout_negative: AVG(v(tia))=2.4 FROM 0.45 TO 0.49\r\ntransimpedance: (out_positive-out_negative)/200n=999990\r\n\nTotal elapsed time: 0.069 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "03_healthy",
+    "returncode": 0,
+    "seconds": 0.46495532989501953,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 03_healthy: Healthy three-electrode reduced model\nStart Time: Sun Sep 20 20:48:59 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09039e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09039e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=9.09004e-08 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-9.09054e-08 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=109996\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=109997\r\nrp_meas: rdc_meas-ru=99997.4\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=3.49098 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=1.50899 FROM 0 TO 56\r\n\nTotal elapsed time: 0.439 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "04_gain_step",
+    "returncode": 0,
+    "seconds": 0.48855090141296387,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 04_gain_step: 20 percent measurement gain increase at t=8s\nStart Time: Sun Sep 20 20:49:00 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09039e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09039e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=1.09081e-07 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-1.09086e-07 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=109996\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=91664.5\r\nrp_meas: rdc_meas-ru=81664.5\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=3.68917 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=1.31089 FROM 0 TO 56\r\n\nTotal elapsed time: 0.467 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "05_offset_step",
+    "returncode": 0,
+    "seconds": 0.4701058864593506,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 05_offset_step: 5mV output-referred offset at t=8s\nStart Time: Sun Sep 20 20:49:00 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09039e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09039e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=9.59004e-08 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-8.59054e-08 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=109996\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=109997\r\nrp_meas: rdc_meas-ru=99997.4\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=3.49598 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=1.514 FROM 0 TO 56\r\n\nTotal elapsed time: 0.448 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "06_frontend_slow",
+    "returncode": 0,
+    "seconds": 0.46675586700439453,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 06_frontend_slow: ADC filter settling fault tau=2.2s\nStart Time: Sun Sep 20 20:49:01 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09039e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09039e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=9.38526e-08 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-9.40967e-08 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=109996\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=106402\r\nrp_meas: rdc_meas-ru=96402\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=2.76353 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=2.23641 FROM 0 TO 56\r\n\nTotal elapsed time: 0.442 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "07_high_cdl",
+    "returncode": 0,
+    "seconds": 0.4618692398071289,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 07_high_cdl: Slow cell Cdl=1mF, nominal tau=9.09s\nStart Time: Sun Sep 20 20:49:01 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999653 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999556 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=3.47733e-07 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-4.45046e-07 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=3.47757e-07 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-4.45087e-07 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=25217.7\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=25215.6\r\nrp_meas: rdc_meas-ru=15215.6\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=3.79378 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=1.15873 FROM 0 TO 56\r\n\nTotal elapsed time: 0.438 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "08_low_signal_noise",
+    "returncode": 0,
+    "seconds": 0.4706838130950928,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 08_low_signal_noise: 1mV excitation plus seeded 1mV RMS output-referred PWL noise\nStart Time: Sun Sep 20 20:49:02 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.000999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.000999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09039e-09 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09039e-09 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=9.10027e-09 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-8.96272e-09 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=109996\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=110714\r\nrp_meas: rdc_meas-ru=100714\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=2.59992 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=2.4013 FROM 0 TO 56\r\n\nTotal elapsed time: 0.448 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "09_switch_disturbance",
+    "returncode": 0,
+    "seconds": 0.48227500915527344,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 09_switch_disturbance: 20ms CE-drive disconnect and defined 1nC injection\nStart Time: Sun Sep 20 20:49:02 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.06802e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09039e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=9.06764e-08 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-9.09054e-08 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=110132\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=110133\r\nrp_meas: rdc_meas-ru=100133\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=3.49098 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=1.509 FROM 0 TO 56\r\n\nTotal elapsed time: 0.460 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "10_mixed_fault",
+    "returncode": 0,
+    "seconds": 0.48631715774536133,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 10_mixed_fault: Gain, offset, slow cell and output noise combined\nStart Time: Sun Sep 20 20:49:03 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999653 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999556 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=3.47733e-07 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-4.45046e-07 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=4.22322e-07 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-5.28974e-07 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=25217.7\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=21015.6\r\nrp_meas: rdc_meas-ru=11015.6\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=4.05757 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=0.896612 FROM 0 TO 56\r\n\nTotal elapsed time: 0.464 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "11_ru_sweep",
+    "returncode": 0,
+    "seconds": 1.3612637519836426,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 11_ru_sweep: Uncompensated resistance sensitivity\nStart Time: Sun Sep 20 20:49:03 2026\nsolver = Normal\nMaximum thread count: 1\n\n\n\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n.step ru=5000\n\n\n\n.step ru=10000\ntnom = 27\ntemp = 27\nmethod = modified trap\n.step ru=20000\n\n\r\nMeasurement: epos\r\n  step\tAVG(v(actual))\tFROM\tTO\r\n     1\t0.00999905\t13\t14\r\n     2\t0.00999909\t13\t14\r\n     3\t0.00999916\t13\t14\r\n\r\nMeasurement: eneg\r\n  step\tAVG(v(actual))\tFROM\tTO\r\n     1\t-0.00999905\t31\t32\r\n     2\t-0.00999909\t31\t32\r\n     3\t-0.00999916\t31\t32\r\n\r\nMeasurement: ipos_true\r\n  step\tAVG(v(i_true))\tFROM\tTO\r\n     1\t9.5229e-08\t13\t14\r\n     2\t9.09039e-08\t13\t14\r\n     3\t8.3754e-08\t13\t14\r\n\r\nMeasurement: ineg_true\r\n  step\tAVG(v(i_true))\tFROM\tTO\r\n     1\t-9.5229e-08\t31\t32\r\n     2\t-9.09039e-08\t31\t32\r\n     3\t-8.37657e-08\t31\t32\r\n\r\nMeasurement: ipos_meas\r\n  step\tAVG(v(i_meas))\tFROM\tTO\r\n     1\t9.52255e-08\t13\t14\r\n     2\t9.09004e-08\t13\t14\r\n     3\t8.37509e-08\t13\t14\r\n\r\nMeasurement: ineg_meas\r\n  step\tAVG(v(i_meas))\tFROM\tTO\r\n     1\t-9.52305e-08\t31\t32\r\n     2\t-9.09054e-08\t31\t32\r\n     3\t-8.37676e-08\t31\t32\r\n\r\nMeasurement: rdc_true\r\n  step\t(epos-eneg)/(ipos_true-ineg_true)\r\n     1\t105000\r\n     2\t109996\r\n     3\t119379\r\n\r\nMeasurement: rdc_meas\r\n  step\t(epos-eneg)/(ipos_meas-ineg_meas)\r\n     1\t105001\r\n     2\t109997\r\n     3\t119380\r\n\r\nMeasurement: rp_meas\r\n  step\trdc_meas-ru\r\n     1\t100001\r\n     2\t99997.4\r\n     3\t99379.8\r\n\r\nMeasurement: vmid_dc\r\n  step\tAVG(v(vmid))\tFROM\tTO\r\n     1\t2.5\t1\t1.5\r\n     2\t2.5\t1\t1.5\r\n     3\t2.5\t1\t1.5\r\n\r\nMeasurement: max_adc\r\n  step\tMAX(v(adc))\tFROM\tTO\r\n     1\t4.42353\t0\t56\r\n     2\t3.49098\t0\t56\r\n     3\t3.0091\t0\t56\r\n\r\nMeasurement: min_adc\r\n  step\tMIN(v(adc))\tFROM\tTO\r\n     1\t0.57606\t0\t56\r\n     2\t1.50899\t0\t56\r\n     3\t1.9909\t0\t56\r\n\nTotal elapsed time: 1.339 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "12_rp_sweep",
+    "returncode": 0,
+    "seconds": 1.360158920288086,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 12_rp_sweep: Polarization resistance sensitivity\nStart Time: Sun Sep 20 20:49:04 2026\nsolver = Normal\nMaximum thread count: 1\n\n\n\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n.step rp=50000\n\n\n\n.step rp=100000\ntnom = 27\ntemp = 27\nmethod = modified trap\n.step rp=200000\n\n\r\nMeasurement: epos\r\n  step\tAVG(v(actual))\tFROM\tTO\r\n     1\t0.00999833\t13\t14\r\n     2\t0.00999909\t13\t14\r\n     3\t0.00999952\t13\t14\r\n\r\nMeasurement: eneg\r\n  step\tAVG(v(actual))\tFROM\tTO\r\n     1\t-0.00999833\t31\t32\r\n     2\t-0.00999909\t31\t32\r\n     3\t-0.00999952\t31\t32\r\n\r\nMeasurement: ipos_true\r\n  step\tAVG(v(i_true))\tFROM\tTO\r\n     1\t1.6664e-07\t13\t14\r\n     2\t9.09039e-08\t13\t14\r\n     3\t4.76225e-08\t13\t14\r\n\r\nMeasurement: ineg_true\r\n  step\tAVG(v(i_true))\tFROM\tTO\r\n     1\t-1.6664e-07\t31\t32\r\n     2\t-9.09039e-08\t31\t32\r\n     3\t-4.76226e-08\t31\t32\r\n\r\nMeasurement: ipos_meas\r\n  step\tAVG(v(i_meas))\tFROM\tTO\r\n     1\t1.66635e-07\t13\t14\r\n     2\t9.09004e-08\t13\t14\r\n     3\t4.76195e-08\t13\t14\r\n\r\nMeasurement: ineg_meas\r\n  step\tAVG(v(i_meas))\tFROM\tTO\r\n     1\t-1.6664e-07\t31\t32\r\n     2\t-9.09054e-08\t31\t32\r\n     3\t-4.76245e-08\t31\t32\r\n\r\nMeasurement: rdc_true\r\n  step\t(epos-eneg)/(ipos_true-ineg_true)\r\n     1\t59999.7\r\n     2\t109996\r\n     3\t209975\r\n\r\nMeasurement: rdc_meas\r\n  step\t(epos-eneg)/(ipos_meas-ineg_meas)\r\n     1\t60000.3\r\n     2\t109997\r\n     3\t209977\r\n\r\nMeasurement: rp_meas\r\n  step\trdc_meas-ru\r\n     1\t50000.3\r\n     2\t99997.4\r\n     3\t199977\r\n\r\nMeasurement: vmid_dc\r\n  step\tAVG(v(vmid))\tFROM\tTO\r\n     1\t2.5\t1\t1.5\r\n     2\t2.5\t1\t1.5\r\n     3\t2.5\t1\t1.5\r\n\r\nMeasurement: max_adc\r\n  step\tMAX(v(adc))\tFROM\tTO\r\n     1\t3.49037\t0\t56\r\n     2\t3.49098\t0\t56\r\n     3\t3.49148\t0\t56\r\n\r\nMeasurement: min_adc\r\n  step\tMIN(v(adc))\tFROM\tTO\r\n     1\t1.5096\t0\t56\r\n     2\t1.50899\t0\t56\r\n     3\t1.50849\t0\t56\r\n\nTotal elapsed time: 1.337 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "13_cdl_sweep",
+    "returncode": 0,
+    "seconds": 1.3524069786071777,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 13_cdl_sweep: Double layer capacitance sensitivity\nStart Time: Sun Sep 20 20:49:06 2026\nsolver = Normal\nMaximum thread count: 1\n\n\n\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n.step cdl=1e-05\n\n\n\n.step cdl=0.0001\ntnom = 27\ntemp = 27\nmethod = modified trap\n.step cdl=0.001\n\n\r\nMeasurement: epos\r\n  step\tAVG(v(actual))\tFROM\tTO\r\n     1\t0.00999909\t13\t14\r\n     2\t0.00999909\t13\t14\r\n     3\t0.00999653\t13\t14\r\n\r\nMeasurement: eneg\r\n  step\tAVG(v(actual))\tFROM\tTO\r\n     1\t-0.00999909\t31\t32\r\n     2\t-0.00999909\t31\t32\r\n     3\t-0.00999556\t31\t32\r\n\r\nMeasurement: ipos_true\r\n  step\tAVG(v(i_true))\tFROM\tTO\r\n     1\t9.09008e-08\t13\t14\r\n     2\t9.09039e-08\t13\t14\r\n     3\t3.47733e-07\t13\t14\r\n\r\nMeasurement: ineg_true\r\n  step\tAVG(v(i_true))\tFROM\tTO\r\n     1\t-9.09008e-08\t31\t32\r\n     2\t-9.09039e-08\t31\t32\r\n     3\t-4.45046e-07\t31\t32\r\n\r\nMeasurement: ipos_meas\r\n  step\tAVG(v(i_meas))\tFROM\tTO\r\n     1\t9.08973e-08\t13\t14\r\n     2\t9.09004e-08\t13\t14\r\n     3\t3.47757e-07\t13\t14\r\n\r\nMeasurement: ineg_meas\r\n  step\tAVG(v(i_meas))\tFROM\tTO\r\n     1\t-9.09023e-08\t31\t32\r\n     2\t-9.09054e-08\t31\t32\r\n     3\t-4.45087e-07\t31\t32\r\n\r\nMeasurement: rdc_true\r\n  step\t(epos-eneg)/(ipos_true-ineg_true)\r\n     1\t110000\r\n     2\t109996\r\n     3\t25217.7\r\n\r\nMeasurement: rdc_meas\r\n  step\t(epos-eneg)/(ipos_meas-ineg_meas)\r\n     1\t110001\r\n     2\t109997\r\n     3\t25215.6\r\n\r\nMeasurement: rp_meas\r\n  step\trdc_meas-ru\r\n     1\t100001\r\n     2\t99997.4\r\n     3\t15215.6\r\n\r\nMeasurement: vmid_dc\r\n  step\tAVG(v(vmid))\tFROM\tTO\r\n     1\t2.5\t1\t1.5\r\n     2\t2.5\t1\t1.5\r\n     3\t2.5\t1\t1.5\r\n\r\nMeasurement: max_adc\r\n  step\tMAX(v(adc))\tFROM\tTO\r\n     1\t3.43394\t0\t56\r\n     2\t3.49098\t0\t56\r\n     3\t3.79378\t0\t56\r\n\r\nMeasurement: min_adc\r\n  step\tMIN(v(adc))\tFROM\tTO\r\n     1\t1.56618\t0\t56\r\n     2\t1.50899\t0\t56\r\n     3\t1.15873\t0\t56\r\n\nTotal elapsed time: 1.328 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "14_known_resistance",
+    "returncode": 0,
+    "seconds": 0.4620490074157715,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 14_known_resistance: Known 110kohm DC resistance\nStart Time: Sun Sep 20 20:49:07 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09008e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09008e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=9.08973e-08 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-9.09023e-08 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=110000\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=110001\r\nrp_meas: rdc_meas-ru=100001\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=2.5909 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=2.4091 FROM 0 TO 56\r\n\nTotal elapsed time: 0.440 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "15_gain_known_reference",
+    "returncode": 0,
+    "seconds": 0.4672667980194092,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 15_gain_known_reference: Known resistor replay with same gain fault\nStart Time: Sun Sep 20 20:49:08 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09008e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09008e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=1.09077e-07 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-1.09082e-07 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=110000\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=91667.7\r\nrp_meas: rdc_meas-ru=81667.7\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=2.60908 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=2.39092 FROM 0 TO 56\r\n\nTotal elapsed time: 0.446 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "16_noise_only",
+    "returncode": 0,
+    "seconds": 0.45964598655700684,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 16_noise_only: Nominal excitation with 1mV RMS output-referred PWL noise\nStart Time: Sun Sep 20 20:49:08 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09039e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09039e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=9.09129e-08 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-9.07754e-08 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=109996\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=110069\r\nrp_meas: rdc_meas-ru=100069\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=3.49151 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=1.51035 FROM 0 TO 56\r\n\nTotal elapsed time: 0.437 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "17_repeatability",
+    "returncode": 0,
+    "seconds": 0.4707071781158447,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 17_repeatability: Healthy duplicate stimulus for reproducibility comparison\nStart Time: Sun Sep 20 20:49:09 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\nreltol = 1e-05\nvolttol = 1e-08\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node eta.  This node is used by binterface.\nWARNING: Less than two connections to node i_true.  This node is used by btrue.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeasured.\nDirect Newton iteration for .op point succeeded.\n\nepos: AVG(v(actual))=0.00999909 FROM 13 TO 14\r\neneg: AVG(v(actual))=-0.00999909 FROM 31 TO 32\r\nipos_true: AVG(v(i_true))=9.09039e-08 FROM 13 TO 14\r\nineg_true: AVG(v(i_true))=-9.09039e-08 FROM 31 TO 32\r\nipos_meas: AVG(v(i_meas))=9.09004e-08 FROM 13 TO 14\r\nineg_meas: AVG(v(i_meas))=-9.09054e-08 FROM 31 TO 32\r\nrdc_true: (epos-eneg)/(ipos_true-ineg_true)=109996\r\nrdc_meas: (epos-eneg)/(ipos_meas-ineg_meas)=109997\r\nrp_meas: rdc_meas-ru=99997.4\r\nvmid_dc: AVG(v(vmid))=2.5 FROM 1 TO 1.5\r\nmax_adc: MAX(v(adc))=3.49098 FROM 0 TO 56\r\nmin_adc: MIN(v(adc))=1.50899 FROM 0 TO 56\r\n\nTotal elapsed time: 0.448 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "18_nonlinear_challenge",
+    "returncode": 0,
+    "seconds": 0.07217264175415039,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 nonlinear symmetric Butler-Volmer challenge, ideal voltage excitation\nStart Time: Sun Sep 20 20:49:09 2026\nsolver = Normal\nMaximum thread count: 1\n\n\n\nabstol = 1e-15\nreltol = 1e-06\nWARNING: Less than two connections to node actual.  This node is used by bactual.\nWARNING: Less than two connections to node i_meas.  This node is used by bmeas.\nWARNING: Less than two connections to node relay.  This node is used by brelay.\nDirect Newton iteration for .op point succeeded.\n.step amp=0.001\n\n\n\n.step amp=0.01\ntnom = 27\ntemp = 27\nmethod = modified trap\n.step amp=0.05\n\n\r\nMeasurement: i_steady\r\n  step\tAVG(v(i_true))\tFROM\tTO\r\n     1\t9.09225e-09\t11\t12\r\n     2\t9.13373e-08\t11\t12\r\n     3\t5.07087e-07\t11\t12\r\n\r\nMeasurement: apparent_rdc\r\n  step\tamp/i_steady\r\n     1\t109984\r\n     2\t109484\r\n     3\t98602.5\r\n\nTotal elapsed time: 0.050 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "19_adc_filter_ac",
+    "returncode": 0,
+    "seconds": 0.023683786392211914,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 standalone ADC input filter small-signal AC check\nStart Time: Sun Sep 20 20:49:09 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\n.OP point found by inspection.\n\nf3db: mag(v(adc))=0.70710678 AT 159.158\r\n\nTotal elapsed time: 0.002 seconds.\n\n",
+    "console": ""
+  },
+  {
+    "case": "20_tia_resistor_noise",
+    "returncode": 0,
+    "seconds": 0.030041933059692383,
+    "log": "LTspice 17.2.4 for MacOS\nCircuit: P1 small-signal resistor-noise illustration, NOT complete op-amp noise prediction\nStart Time: Sun Sep 20 20:49:09 2026\nsolver = Normal\nMaximum thread count: 1\ntnom = 27\ntemp = 27\nmethod = modified trap\n.OP point found by inspection.\nTotal elapsed time: 0.002 seconds.\n\n",
+    "console": ""
+  }
+]

@@ -1,0 +1,9 @@
+P1 standalone ADC input filter small-signal AC check
+Vin in 0 AC 1
+Rfilter in adc 1k
+Cfilter adc 0 1u
+Rload adc 0 1G
+.ac dec 100 0.1 100k
+.save V(adc)
+.meas AC f3db WHEN mag(V(adc))=0.70710678 FALL=1
+.end

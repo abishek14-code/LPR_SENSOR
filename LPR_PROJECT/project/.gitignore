@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+*.bak
+*.tmp
+.DS_Store
+
+# Generated P3 simulation evidence
+results/figures/
+results/generated/
+results/tables/

@@ -1,0 +1,6 @@
+P1 11_ru_sweep: Uncompensated resistance sensitivity
+* Generated source case. Native LTspice execution has NOT occurred at delivery.
+.param RU=10k RP=100k CDL=100u AMP=10m RF=1Meg RADC=1k CADC=1u GAINSTEP=0 OFFSET=0 NOISE=0 SWFAULT=0
+.include ../models/electrical_core.inc
+.step param RU list 5k 10k 20k
+.end

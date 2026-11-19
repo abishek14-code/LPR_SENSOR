@@ -1,0 +1,73 @@
+{
+  "batch": ".",
+  "counts": {
+    "ACCEPT": 9,
+    "REJECT": 6,
+    "WAIT_OR_REPEAT": 1
+  },
+  "native_executions": 22,
+  "native_wall_time_s": 364.615067,
+  "actual_reacquisitions": 3,
+  "P3_changes": false,
+  "scope": "declared planar simulation integration fixture",
+  "retained_3D_specimen_qualified": false,
+  "physical_release": false,
+  "baseline_metrics": {
+    "P3_gated_last_quarter_OLS": {
+      "evaluable_attempts": 18,
+      "released": 9,
+      "coverage": 0.5,
+      "released_with_error_over_5_percent": 0,
+      "numerical_false_acceptance_denominator": 5,
+      "numerical_false_acceptance_numerator": 0,
+      "withheld_with_error_at_most_5_percent": 4,
+      "numerically_good_denominator": 13,
+      "definition": "Numerical error criterion only, not ground truth for calibration/recovery/timeouts. A small slope error can coexist with a real quality fault."
+    },
+    "last_quarter_OLS": {
+      "evaluable_attempts": 18,
+      "released": 18,
+      "coverage": 1.0,
+      "released_with_error_over_5_percent": 5,
+      "numerical_false_acceptance_denominator": 5,
+      "numerical_false_acceptance_numerator": 5,
+      "withheld_with_error_at_most_5_percent": 0,
+      "numerically_good_denominator": 13,
+      "definition": "Numerical error criterion only, not ground truth for calibration/recovery/timeouts. A small slope error can coexist with a real quality fault."
+    },
+    "last_sample": {
+      "evaluable_attempts": 18,
+      "released": 18,
+      "coverage": 1.0,
+      "released_with_error_over_5_percent": 5,
+      "numerical_false_acceptance_denominator": 5,
+      "numerical_false_acceptance_numerator": 5,
+      "withheld_with_error_at_most_5_percent": 0,
+      "numerically_good_denominator": 13,
+      "definition": "Numerical error criterion only, not ground truth for calibration/recovery/timeouts. A small slope error can coexist with a real quality fault."
+    },
+    "whole_point_mean": {
+      "evaluable_attempts": 18,
+      "released": 18,
+      "coverage": 1.0,
+      "released_with_error_over_5_percent": 18,
+      "numerical_false_acceptance_denominator": 18,
+      "numerical_false_acceptance_numerator": 18,
+      "withheld_with_error_at_most_5_percent": 0,
+      "numerically_good_denominator": 0,
+      "definition": "Numerical error criterion only, not ground truth for calibration/recovery/timeouts. A small slope error can coexist with a real quality fault."
+    }
+  },
+  "tests": {
+    "existing_P3_tests_passed": 184,
+    "new_interface_tests_passed": 16,
+    "total": 200,
+    "note": "Selected existing P3 regression suite plus new interface tests; not a rerun of every historical campaign."
+  },
+  "source_preservation": 185,
+  "native_original_preservation": {
+    "acquisition.raw": "1b12379c89e5c1fe1f900e8e93b1e73bade29e7bc2ad495b6cc7918ddc0815de",
+    "acquisition.log": "0439b12b75e44c300880c8d0f1433aa50d1972b3592093806c6f697d6a1f4d33",
+    "acquisition.cir": "9894077d9679749bbd0b2f68c9cc5384ecf9883c5e0f066d7fbf5c3f9be6d3c5"
+  }
+}

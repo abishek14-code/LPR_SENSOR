@@ -1,0 +1,23 @@
+{
+  "scope": "SIMULATION_FIXTURE_ONLY",
+  "standard_id": "independent-switched-10k",
+  "resistance_ohm": 10000.0,
+  "relative_half_width": 0.001,
+  "tolerance_basis": "declared rectangular engineering assumption; not a certified physical standard",
+  "created_utc": "2026-10-21T13:38:28.860738+00:00",
+  "validity": "Only the RAW/deck/standard hash bindings recorded by this run; no physical expiry claim",
+  "training_command_V": [
+    -0.001,
+    0.001
+  ],
+  "holdout_command_V": [
+    -0.0005,
+    0.0005
+  ],
+  "reference_command_V": 0.001,
+  "plateau_duration_s": 10.0,
+  "minimum_plateau_samples": 100,
+  "protocol_revision": "v2: uniformly longer independent reference observations after 1-second plateau noise failures",
+  "physics": "Independent switched resistor shares the specimen TIA, filter and clocked measurement chain",
+  "calibration_scope": "characterization and holdout validation; no gain correction applied to specimen data"
+}

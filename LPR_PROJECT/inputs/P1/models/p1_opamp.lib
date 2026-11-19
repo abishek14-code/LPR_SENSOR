@@ -1,0 +1,15 @@
+* P1 generic op amp. ORIGINAL EDUCATIONAL MODEL, NOT LM324 or a vendor model.
+* Pins: noninverting, inverting, positive rail, negative rail, output.
+* Finite gain, dominant pole, input resistance/bias, output resistance and limits.
+* Limit before pole avoids extreme internal windup; large-signal slew is NOT
+* an accurate physical model. No common-mode limits, temperature or device noise.
+.subckt P1_OP inp inn vp vn out params: A0=100k GBW=1Meg VOS=0 RIN=1T IB=0 ROUT=20
+Rdiff inp inn {RIN}
+Ibp inp vn {IB}
+Ibn inn vn {IB}
+Bdrive drive 0 V=limit((V(vp)+V(vn))/2+A0*(V(inp,inn)+VOS),V(vn)+0.1,V(vp)-0.1)
+Rdom drive pole 1k
+Cdom pole 0 {A0/(2*pi*GBW*1k)}
+Eout ideal 0 pole 0 1
+Rout ideal out {ROUT}
+.ends P1_OP

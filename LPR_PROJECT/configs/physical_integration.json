@@ -1,0 +1,22 @@
+{
+  "geometry_id": "shared-interface-planar-SI-RE-midgap-v3",
+  "classification": "NEW explicitly specified simulation integration fixture; not reconstructed specimen dimensions",
+  "coordinate_scale_m_per_original_unit": 0.001,
+  "width_m": 0.04,
+  "electrolyte_length_m": 0.04,
+  "electrode_thickness_m": 0.005,
+  "depth_m": 0.00005,
+  "reference_distance_m": 0.02,
+  "reference_probe_m": [0.02, 0.025],
+  "electrode_conductivity_S_m": 1000000.0,
+  "conductivity_sweep_S_m": [0.5, 1.0, 2.0],
+  "excitation_V": 1.0,
+  "reference_definition": "nonloading observation of electrolyte potential at midgap; no imposed reference-electrode potential/current boundary",
+  "working_definition": "mean electrolyte potential on lower shared material interface y=0.005m",
+  "counter_definition": "top current-carrying electrode; its potential drop is controlled outside WE-to-RE Ru",
+  "boundary_conditions": "bottom outer metal 0 V; top outer metal 1 V; lateral insulating natural zero normal current",
+  "uncertainty": "numerical comparison/refinement errors assessed; no physical conductivity, dimensions or reference uncertainty budget",
+  "online_Ru_permitted": false,
+  "Rp_ohm": 100000.0,
+  "Cdl_F": 0.0001
+}

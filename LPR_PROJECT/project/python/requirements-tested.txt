@@ -1,0 +1,7 @@
+# Actual direct versions used for this P3 validation (Python 3.14.5).
+# Not a transitive dependency lock or a physical-model validation claim.
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.17.1
+matplotlib==3.10.9
+pytest==8.4.2

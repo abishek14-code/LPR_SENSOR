@@ -1,0 +1,7 @@
+! ----- names for bodies -----
+$ BottomElectrode = 1
+$ Electrolyte = 2
+$ TopElectrode = 3
+! ----- names for boundaries -----
+$ BottomElectrodeBC = 4
+$ TopElectrodeBC = 5

@@ -1,0 +1,30 @@
+Version 4
+SymbolType CELL
+LINE Normal -64 -48 64 0
+LINE Normal 64 0 -64 48
+LINE Normal -64 48 -64 -48
+LINE Normal -52 -24 -36 -24
+LINE Normal -44 -32 -44 -16
+LINE Normal -52 24 -36 24
+LINE Normal 0 -64 0 -24
+LINE Normal 0 24 0 64
+WINDOW 0 24 -64 Left 2
+WINDOW 3 24 56 Left 2
+SYMATTR Prefix X
+SYMATTR Value P1_OP
+SYMATTR Description P1 generic amplifier: IN+, IN-, V+, V-, OUT
+PIN -64 -24 NONE 0
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -64 24 NONE 0
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN 0 -64 NONE 0
+PINATTR PinName V+
+PINATTR SpiceOrder 3
+PIN 0 64 NONE 0
+PINATTR PinName V-
+PINATTR SpiceOrder 4
+PIN 64 0 NONE 0
+PINATTR PinName OUT
+PINATTR SpiceOrder 5

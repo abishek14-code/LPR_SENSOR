@@ -1,0 +1,5 @@
+P1 17_repeatability: Healthy duplicate stimulus for reproducibility comparison
+* Generated source case. Native LTspice execution has NOT occurred at delivery.
+.param RU=10k RP=100k CDL=100u AMP=10m RF=1Meg RADC=1k CADC=1u GAINSTEP=0 OFFSET=0 NOISE=0 SWFAULT=0
+.include ../models/electrical_core.inc
+.end

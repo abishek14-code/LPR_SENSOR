@@ -1,0 +1,43 @@
+{
+  "provenance": "PYTHON_ANALYTICAL_AND_ODE_ONLY",
+  "ltspice_executed": false,
+  "baseline": {
+    "ru_ohm": 10000.0,
+    "rp_ohm": 100000.0,
+    "cdl_F": 0.0001,
+    "step_V": 0.01,
+    "rdc_ohm": 110000.0,
+    "tau_s": 0.9090909090909091,
+    "i_initial_A": 1e-06,
+    "i_steady_A": 9.090909090909091e-08
+  },
+  "max_ode_vs_closed_form_error_A": 1.9862340277962106e-17,
+  "settling_within_1_percent_final_current_s": 6.279777526347397,
+  "high_cdl_tau_s": 9.09090909090909,
+  "adc_filter_f3db_Hz": 159.15494309189535,
+  "adc_filter_slow_tau_s": 2.2,
+  "expected_gain_fault_rdc_ohm": 91666.66666666667,
+  "expected_gain_fault_apparent_rp_ohm": 81666.66666666667,
+  "expected_5mV_output_offset_current_A": 5e-09,
+  "nonlinear_steady_state": [
+    {
+      "step_V": 0.001,
+      "eta_V": 0.0009090867178017383,
+      "current_A": 9.091328219687768e-09,
+      "apparent_rdc_ohm": 109994.92877558258
+    },
+    {
+      "step_V": 0.01,
+      "eta_V": 0.009086717237285633,
+      "current_A": 9.132827627143662e-08,
+      "apparent_rdc_ohm": 109495.11376168994
+    },
+    {
+      "step_V": 0.05,
+      "eta_V": 0.044929444384058805,
+      "current_A": 5.070555615941202e-07,
+      "apparent_rdc_ohm": 98608.52298475175
+    }
+  ],
+  "limitations": "Does not validate the op-amp, switching, or LTspice engine."
+}

@@ -1,0 +1,1566 @@
+{
+  "source": "/Users/abisheksingh/Music/porjectidp123/final_integration_dan_dar_abi/LPR_PROJECT/evidence/native/20261021T133828/nominal_healthy/attempt_0/acquisition.cir",
+  "source_sha256": "5ab89706add63c9a3c22790ebfee9eff3b61c275a3c31aaca9c048bd54a99294",
+  "devices": {
+    "Vcc": {
+      "source_name": "Vcc",
+      "instance": "Vcc",
+      "nodes": [
+        "vcc",
+        "0"
+      ],
+      "value": "5",
+      "pins": [
+        [
+          128,
+          480
+        ],
+        [
+          128,
+          560
+        ]
+      ],
+      "original_nodes": [
+        "vcc",
+        "0"
+      ],
+      "original_value": "5",
+      "behavioral_wrapper": false
+    },
+    "Rmid_top": {
+      "source_name": "Rmid_top",
+      "instance": "Rmid_top",
+      "nodes": [
+        "vcc",
+        "mid_raw"
+      ],
+      "value": "10k",
+      "pins": [
+        [
+          368,
+          480
+        ],
+        [
+          368,
+          560
+        ]
+      ],
+      "original_nodes": [
+        "vcc",
+        "mid_raw"
+      ],
+      "original_value": "10k",
+      "behavioral_wrapper": false
+    },
+    "Rmid_bottom": {
+      "source_name": "Rmid_bottom",
+      "instance": "Rmid_bottom",
+      "nodes": [
+        "mid_raw",
+        "0"
+      ],
+      "value": "10k",
+      "pins": [
+        [
+          368,
+          752
+        ],
+        [
+          368,
+          832
+        ]
+      ],
+      "original_nodes": [
+        "mid_raw",
+        "0"
+      ],
+      "original_value": "10k",
+      "behavioral_wrapper": false
+    },
+    "Cmid": {
+      "source_name": "Cmid",
+      "instance": "Cmid",
+      "nodes": [
+        "mid_raw",
+        "0"
+      ],
+      "value": "10u",
+      "pins": [
+        [
+          128,
+          752
+        ],
+        [
+          128,
+          816
+        ]
+      ],
+      "original_nodes": [
+        "mid_raw",
+        "0"
+      ],
+      "original_value": "10u",
+      "behavioral_wrapper": false
+    },
+    "Xmid": {
+      "source_name": "Xmid",
+      "instance": "XU1",
+      "nodes": [
+        "mid_raw",
+        "vmid",
+        "vcc",
+        "0",
+        "vmid"
+      ],
+      "value": "P1_OP",
+      "pins": [
+        [
+          640,
+          456
+        ],
+        [
+          640,
+          504
+        ],
+        [
+          704,
+          416
+        ],
+        [
+          704,
+          544
+        ],
+        [
+          768,
+          480
+        ]
+      ],
+      "original_nodes": [
+        "mid_raw",
+        "vmid",
+        "vcc",
+        "0",
+        "vmid"
+      ],
+      "original_value": "P1_OP",
+      "behavioral_wrapper": false
+    },
+    "Xtia": {
+      "source_name": "Xtia",
+      "instance": "XU4",
+      "nodes": [
+        "vmid",
+        "we",
+        "vcc",
+        "0",
+        "tia"
+      ],
+      "value": "P1_OP",
+      "pins": [
+        [
+          832,
+          808
+        ],
+        [
+          832,
+          856
+        ],
+        [
+          896,
+          768
+        ],
+        [
+          896,
+          896
+        ],
+        [
+          960,
+          832
+        ]
+      ],
+      "original_nodes": [
+        "vmid",
+        "we",
+        "vcc",
+        "0",
+        "tia"
+      ],
+      "original_value": "P1_OP",
+      "behavioral_wrapper": false
+    },
+    "Rfeedback": {
+      "source_name": "Rfeedback",
+      "instance": "Rfeedback",
+      "nodes": [
+        "tia",
+        "we"
+      ],
+      "value": "{RF}",
+      "pins": [
+        [
+          896,
+          624
+        ],
+        [
+          976,
+          624
+        ]
+      ],
+      "original_nodes": [
+        "tia",
+        "we"
+      ],
+      "original_value": "{RF}",
+      "behavioral_wrapper": false
+    },
+    "Cfeedback": {
+      "source_name": "Cfeedback",
+      "instance": "Cfeedback",
+      "nodes": [
+        "tia",
+        "we"
+      ],
+      "value": "100p",
+      "pins": [
+        [
+          912,
+          432
+        ],
+        [
+          976,
+          432
+        ]
+      ],
+      "original_nodes": [
+        "tia",
+        "we"
+      ],
+      "original_value": "100p",
+      "behavioral_wrapper": false
+    },
+    "Vsense": {
+      "source_name": "Vsense",
+      "instance": "Vsense",
+      "nodes": [
+        "we",
+        "metal"
+      ],
+      "value": "0",
+      "pins": [
+        [
+          1168,
+          832
+        ],
+        [
+          1248,
+          832
+        ]
+      ],
+      "original_nodes": [
+        "we",
+        "metal"
+      ],
+      "original_value": "0",
+      "behavioral_wrapper": false
+    },
+    "Ssample": {
+      "source_name": "Ssample",
+      "instance": "Ssample",
+      "nodes": [
+        "metal",
+        "cellmetal",
+        "sample_select",
+        "0"
+      ],
+      "value": "SWITCH_PATH",
+      "pins": [
+        [
+          1408,
+          832
+        ],
+        [
+          1488,
+          832
+        ],
+        [
+          1432,
+          896
+        ],
+        [
+          1464,
+          896
+        ]
+      ],
+      "original_nodes": [
+        "metal",
+        "cellmetal",
+        "sample_select",
+        "0"
+      ],
+      "original_value": "SWITCH_PATH",
+      "behavioral_wrapper": false
+    },
+    "Rpolar": {
+      "source_name": "Rpolar",
+      "instance": "Rpolar",
+      "nodes": [
+        "cellmetal",
+        "surf"
+      ],
+      "value": "{RP}",
+      "pins": [
+        [
+          1680,
+          624
+        ],
+        [
+          1760,
+          624
+        ]
+      ],
+      "original_nodes": [
+        "cellmetal",
+        "surf"
+      ],
+      "original_value": "{RP}",
+      "behavioral_wrapper": false
+    },
+    "Cdouble": {
+      "source_name": "Cdouble",
+      "instance": "Cdouble",
+      "nodes": [
+        "cellmetal",
+        "surf"
+      ],
+      "value": "{CDL}",
+      "pins": [
+        [
+          1688,
+          832
+        ],
+        [
+          1752,
+          832
+        ]
+      ],
+      "original_nodes": [
+        "cellmetal",
+        "surf"
+      ],
+      "original_value": "{CDL}",
+      "behavioral_wrapper": false
+    },
+    "Runcomp": {
+      "source_name": "Runcomp",
+      "instance": "Runcomp",
+      "nodes": [
+        "surf",
+        "re"
+      ],
+      "value": "{RU}",
+      "pins": [
+        [
+          1968,
+          832
+        ],
+        [
+          2048,
+          832
+        ]
+      ],
+      "original_nodes": [
+        "surf",
+        "re"
+      ],
+      "original_value": "{RU}",
+      "behavioral_wrapper": false
+    },
+    "Rcounter": {
+      "source_name": "Rcounter",
+      "instance": "Rcounter",
+      "nodes": [
+        "ce",
+        "re"
+      ],
+      "value": "{RCOUNTER}",
+      "pins": [
+        [
+          2256,
+          832
+        ],
+        [
+          2336,
+          832
+        ]
+      ],
+      "original_nodes": [
+        "ce",
+        "re"
+      ],
+      "original_value": "{RCOUNTER}",
+      "behavioral_wrapper": false
+    },
+    "Sdrive": {
+      "source_name": "Sdrive",
+      "instance": "Sdrive",
+      "nodes": [
+        "drive_amp",
+        "ce",
+        "drive",
+        "0"
+      ],
+      "value": "SWITCH_PATH",
+      "pins": [
+        [
+          2544,
+          832
+        ],
+        [
+          2624,
+          832
+        ],
+        [
+          2568,
+          896
+        ],
+        [
+          2600,
+          896
+        ]
+      ],
+      "original_nodes": [
+        "drive_amp",
+        "ce",
+        "drive",
+        "0"
+      ],
+      "original_value": "SWITCH_PATH",
+      "behavioral_wrapper": false
+    },
+    "Xcontrol": {
+      "source_name": "Xcontrol",
+      "instance": "XU3",
+      "nodes": [
+        "target",
+        "re_buf",
+        "vcc",
+        "0",
+        "drive_amp"
+      ],
+      "value": "P1_OP",
+      "pins": [
+        [
+          3008,
+          808
+        ],
+        [
+          3008,
+          856
+        ],
+        [
+          3072,
+          768
+        ],
+        [
+          3072,
+          896
+        ],
+        [
+          3136,
+          832
+        ]
+      ],
+      "original_nodes": [
+        "target",
+        "re_buf",
+        "vcc",
+        "0",
+        "drive_amp"
+      ],
+      "original_value": "P1_OP",
+      "behavioral_wrapper": false
+    },
+    "Xref": {
+      "source_name": "Xref",
+      "instance": "XU2",
+      "nodes": [
+        "re",
+        "re_buf",
+        "vcc",
+        "0",
+        "re_buf"
+      ],
+      "value": "P1_OP",
+      "pins": [
+        [
+          3008,
+          456
+        ],
+        [
+          3008,
+          504
+        ],
+        [
+          3072,
+          416
+        ],
+        [
+          3072,
+          544
+        ],
+        [
+          3136,
+          480
+        ]
+      ],
+      "original_nodes": [
+        "re",
+        "re_buf",
+        "vcc",
+        "0",
+        "re_buf"
+      ],
+      "original_value": "P1_OP",
+      "behavioral_wrapper": false
+    },
+    "Btarget": {
+      "source_name": "Btarget",
+      "instance": "XU_target",
+      "nodes": [
+        "vmid",
+        "req",
+        "target",
+        "0"
+      ],
+      "value": "LPR_TARGET",
+      "pins": [
+        [
+          2432,
+          456
+        ],
+        [
+          2432,
+          504
+        ],
+        [
+          2752,
+          480
+        ],
+        [
+          2592,
+          560
+        ]
+      ],
+      "original_nodes": [
+        "target",
+        "0"
+      ],
+      "original_value": "V=V(vmid)-V(req)",
+      "behavioral_wrapper": true
+    },
+    "Scal": {
+      "source_name": "Scal",
+      "instance": "Scal",
+      "nodes": [
+        "metal",
+        "calmetal",
+        "cal_select",
+        "0"
+      ],
+      "value": "SWITCH_PATH",
+      "pins": [
+        [
+          1408,
+          1120
+        ],
+        [
+          1488,
+          1120
+        ],
+        [
+          1432,
+          1184
+        ],
+        [
+          1464,
+          1184
+        ]
+      ],
+      "original_nodes": [
+        "metal",
+        "calmetal",
+        "cal_select",
+        "0"
+      ],
+      "original_value": "SWITCH_PATH",
+      "behavioral_wrapper": false
+    },
+    "Rcal": {
+      "source_name": "Rcal",
+      "instance": "Rcal",
+      "nodes": [
+        "calmetal",
+        "re"
+      ],
+      "value": "10k",
+      "pins": [
+        [
+          1792,
+          1120
+        ],
+        [
+          1872,
+          1120
+        ]
+      ],
+      "original_nodes": [
+        "calmetal",
+        "re"
+      ],
+      "original_value": "10k",
+      "behavioral_wrapper": false
+    },
+    "Bcal_select": {
+      "source_name": "Bcal_select",
+      "instance": "XU_cal_select",
+      "nodes": [
+        "sample_select",
+        "cal_select",
+        "0"
+      ],
+      "value": "LPR_SELECT",
+      "pins": [
+        [
+          1008,
+          1120
+        ],
+        [
+          1328,
+          1120
+        ],
+        [
+          1168,
+          1200
+        ]
+      ],
+      "original_nodes": [
+        "cal_select",
+        "0"
+      ],
+      "original_value": "V=1-V(sample_select)",
+      "behavioral_wrapper": true
+    },
+    "Vnoise": {
+      "source_name": "Vnoise",
+      "instance": "Vnoise",
+      "nodes": [
+        "nunit",
+        "0"
+      ],
+      "value": "PWL FILE=noise.txt",
+      "pins": [
+        [
+          128,
+          1472
+        ],
+        [
+          128,
+          1552
+        ]
+      ],
+      "original_nodes": [
+        "nunit",
+        "0"
+      ],
+      "original_value": "PWL FILE=noise.txt",
+      "behavioral_wrapper": false
+    },
+    "Bcondition": {
+      "source_name": "Bcondition",
+      "instance": "XU_condition",
+      "nodes": [
+        "vmid",
+        "tia",
+        "reverse",
+        "nunit",
+        "state_code",
+        "conditioned",
+        "0"
+      ],
+      "value": "LPR_CONDITION",
+      "pins": [
+        [
+          544,
+          1408
+        ],
+        [
+          544,
+          1456
+        ],
+        [
+          544,
+          1504
+        ],
+        [
+          544,
+          1552
+        ],
+        [
+          544,
+          1600
+        ],
+        [
+          864,
+          1504
+        ],
+        [
+          704,
+          1648
+        ]
+      ],
+      "original_nodes": [
+        "conditioned",
+        "0"
+      ],
+      "original_value": "V=V(vmid)+GAIN*if(V(reverse)>.5,REVERSEGAIN,1)*(V(tia)-V(vmid))+OFFSET+NOISE*V(nunit)+if(UNSTABLE>0,if(abs(V(state_code)-9)<.1,.1*sin(2*pi*time*2),0),0)",
+      "behavioral_wrapper": true
+    },
+    "Rfilter": {
+      "source_name": "Rfilter",
+      "instance": "Rfilter",
+      "nodes": [
+        "conditioned",
+        "adc"
+      ],
+      "value": "1k",
+      "pins": [
+        [
+          1040,
+          1504
+        ],
+        [
+          1120,
+          1504
+        ]
+      ],
+      "original_nodes": [
+        "conditioned",
+        "adc"
+      ],
+      "original_value": "1k",
+      "behavioral_wrapper": false
+    },
+    "Cfilter": {
+      "source_name": "Cfilter",
+      "instance": "Cfilter",
+      "nodes": [
+        "adc",
+        "0"
+      ],
+      "value": "1u",
+      "pins": [
+        [
+          1216,
+          1744
+        ],
+        [
+          1216,
+          1808
+        ]
+      ],
+      "original_nodes": [
+        "adc",
+        "0"
+      ],
+      "original_value": "1u",
+      "behavioral_wrapper": false
+    },
+    "Radcload": {
+      "source_name": "Radcload",
+      "instance": "Radcload",
+      "nodes": [
+        "adc",
+        "0"
+      ],
+      "value": "1G",
+      "pins": [
+        [
+          1472,
+          1744
+        ],
+        [
+          1472,
+          1824
+        ]
+      ],
+      "original_nodes": [
+        "adc",
+        "0"
+      ],
+      "original_value": "1G",
+      "behavioral_wrapper": false
+    },
+    "Sadc": {
+      "source_name": "Sadc",
+      "instance": "Sadc",
+      "nodes": [
+        "adc",
+        "adc_hold",
+        "clock",
+        "0"
+      ],
+      "value": "SAMPLE_SWITCH",
+      "pins": [
+        [
+          1472,
+          1504
+        ],
+        [
+          1552,
+          1504
+        ],
+        [
+          1496,
+          1568
+        ],
+        [
+          1528,
+          1568
+        ]
+      ],
+      "original_nodes": [
+        "adc",
+        "adc_hold",
+        "clock",
+        "0"
+      ],
+      "original_value": "SAMPLE_SWITCH",
+      "behavioral_wrapper": false
+    },
+    "Cadc_hold": {
+      "source_name": "Cadc_hold",
+      "instance": "Cadc_hold",
+      "nodes": [
+        "adc_hold",
+        "0"
+      ],
+      "value": "1n",
+      "pins": [
+        [
+          1728,
+          1744
+        ],
+        [
+          1728,
+          1808
+        ]
+      ],
+      "original_nodes": [
+        "adc_hold",
+        "0"
+      ],
+      "original_value": "1n",
+      "behavioral_wrapper": false
+    },
+    "Bmeas": {
+      "source_name": "Bmeas",
+      "instance": "XU_meas",
+      "nodes": [
+        "adc_hold",
+        "vmid",
+        "i_meas",
+        "0"
+      ],
+      "value": "LPR_CURRENT",
+      "pins": [
+        [
+          1792,
+          1480
+        ],
+        [
+          1792,
+          1528
+        ],
+        [
+          2112,
+          1504
+        ],
+        [
+          1952,
+          1584
+        ]
+      ],
+      "original_nodes": [
+        "i_meas",
+        "0"
+      ],
+      "original_value": "V=(V(adc_hold)-V(vmid))/RF",
+      "behavioral_wrapper": true
+    },
+    "Bactual": {
+      "source_name": "Bactual",
+      "instance": "XU_actual",
+      "nodes": [
+        "we",
+        "re",
+        "actual",
+        "0"
+      ],
+      "value": "LPR_VOLTAGE",
+      "pins": [
+        [
+          2272,
+          1480
+        ],
+        [
+          2272,
+          1528
+        ],
+        [
+          2592,
+          1504
+        ],
+        [
+          2432,
+          1584
+        ]
+      ],
+      "original_nodes": [
+        "actual",
+        "0"
+      ],
+      "original_value": "V=V(we,re)",
+      "behavioral_wrapper": true
+    },
+    "Svoltage": {
+      "source_name": "Svoltage",
+      "instance": "Svoltage",
+      "nodes": [
+        "actual",
+        "actual_hold",
+        "clock",
+        "0"
+      ],
+      "value": "SAMPLE_SWITCH",
+      "pins": [
+        [
+          2752,
+          1504
+        ],
+        [
+          2832,
+          1504
+        ],
+        [
+          2776,
+          1568
+        ],
+        [
+          2808,
+          1568
+        ]
+      ],
+      "original_nodes": [
+        "actual",
+        "actual_hold",
+        "clock",
+        "0"
+      ],
+      "original_value": "SAMPLE_SWITCH",
+      "behavioral_wrapper": false
+    },
+    "Cvoltage_hold": {
+      "source_name": "Cvoltage_hold",
+      "instance": "Cvoltage_hold",
+      "nodes": [
+        "actual_hold",
+        "0"
+      ],
+      "value": "1n",
+      "pins": [
+        [
+          3008,
+          1744
+        ],
+        [
+          3008,
+          1808
+        ]
+      ],
+      "original_nodes": [
+        "actual_hold",
+        "0"
+      ],
+      "original_value": "1n",
+      "behavioral_wrapper": false
+    },
+    "Binterface": {
+      "source_name": "Binterface",
+      "instance": "XU_interface",
+      "nodes": [
+        "cellmetal",
+        "surf",
+        "eta_truth",
+        "0"
+      ],
+      "value": "LPR_ETA",
+      "pins": [
+        [
+          3072,
+          1096
+        ],
+        [
+          3072,
+          1144
+        ],
+        [
+          3392,
+          1120
+        ],
+        [
+          3232,
+          1200
+        ]
+      ],
+      "original_nodes": [
+        "eta_truth",
+        "0"
+      ],
+      "original_value": "V=V(cellmetal,surf)",
+      "behavioral_wrapper": true
+    },
+    "Btrue": {
+      "source_name": "Btrue",
+      "instance": "Btrue",
+      "nodes": [
+        "i_true",
+        "0"
+      ],
+      "value": "V=I(Vsense)",
+      "pins": [
+        [
+          3408,
+          832
+        ],
+        [
+          3408,
+          912
+        ]
+      ],
+      "original_nodes": [
+        "i_true",
+        "0"
+      ],
+      "original_value": "V=I(Vsense)",
+      "behavioral_wrapper": false
+    },
+    "Vclock": {
+      "source_name": "Vclock",
+      "instance": "Vclock",
+      "nodes": [
+        "clock",
+        "0"
+      ],
+      "value": "PULSE(0 1 .04989 10u 10u 100u .05)",
+      "pins": [
+        [
+          368,
+          1744
+        ],
+        [
+          368,
+          1824
+        ]
+      ],
+      "original_nodes": [
+        "clock",
+        "0"
+      ],
+      "original_value": "PULSE(0 1 .04989 10u 10u 100u .05)",
+      "behavioral_wrapper": false
+    },
+    "V_req": {
+      "source_name": "V_req",
+      "instance": "V_req",
+      "nodes": [
+        "req",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_req.txt",
+      "pins": [
+        [
+          128,
+          2240
+        ],
+        [
+          128,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "req",
+        "0"
+      ],
+      "original_value": "PWL(0 -0.001 10.00004 -0.001 10.00005 0.001 20.00004 0.001 20.00005 -0.0005 30.00004 -0.0005 30.00005 0.0005 40.00004 0.0005 40.00005 0.001 50.00004 0.001 50.00005 0 110.00004 0 110.00005 -0.005 125.00004 -0.005 125.00005 -0.0025 140.00004 -0.0025 140.00005 0 155.00004 0 155.00005 0.0025 170.00004 0.0025 170.00005 0.005 185.00004 0.005 185.00005 0 186.00004 0 186.00005 -0.01 201.00004 -0.01 201.00005 -0.005 216.00004 -0.005 216.00005 0 231.00004 0 231.00005 0.005 246.00004 0.005 246.00005 0.01 261.00004 0.01 261.00005 0 262.00004 0 262.00005 -0.005 277.00004 -0.005 277.00005 -0.0025 292.00004 -0.0025 292.00005 0 307.00004 0 307.00005 0.0025 322.00004 0.0025 322.00005 0.005 337.00004 0.005 337.00005 0 338.00004 0 338.00005 0.005 353.00004 0.005 353.00005 0.0025 368.00004 0.0025 368.00005 0 383.00004 0 383.00005 -0.0025 398.00004 -0.0025 398.00005 -0.005 413.00004 -0.005 413.00005 0 414.00004 0 414.00005 0.01 429.00004 0.01 429.00005 0.005 444.00004 0.005 444.00005 0 459.00004 0 459.00005 -0.005 474.00004 -0.005 474.00005 -0.01 489.00004 -0.01 489.00005 0 490.00004 0 490.00005 0.005 505.00004 0.005 505.00005 0.0025 520.00004 0.0025 520.00005 0 535.00004 0 535.00005 -0.0025 550.00004 -0.0025 550.00005 -0.005 565.00004 -0.005 565.00005 0 626.00004 0 626.00005 -0.001 636.00004 -0.001 636.00005 0.001 646.00004 0.001 646.00005 -0.0005 656.00004 -0.0005 656.00005 0.0005 666.00004 0.0005 666.00005 0.001 676 0.001)",
+      "behavioral_wrapper": false
+    },
+    "V_drive": {
+      "source_name": "V_drive",
+      "instance": "V_drive",
+      "nodes": [
+        "drive",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_drive.txt",
+      "pins": [
+        [
+          480,
+          2240
+        ],
+        [
+          480,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "drive",
+        "0"
+      ],
+      "original_value": "PWL(0 1 50.00004 1 50.00005 0 110.00004 0 110.00005 1 566.00004 1 566.00005 0 626.00004 0 626.00005 1 676 1)",
+      "behavioral_wrapper": false
+    },
+    "V_sample_select": {
+      "source_name": "V_sample_select",
+      "instance": "V_sample_select",
+      "nodes": [
+        "sample_select",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_sample_select.txt",
+      "pins": [
+        [
+          832,
+          2240
+        ],
+        [
+          832,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "sample_select",
+        "0"
+      ],
+      "original_value": "PWL(0 0 50.00004 0 50.00005 1 626.00004 1 626.00005 0 676 0)",
+      "behavioral_wrapper": false
+    },
+    "V_state_code": {
+      "source_name": "V_state_code",
+      "instance": "V_state_code",
+      "nodes": [
+        "state_code",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_state_code.txt",
+      "pins": [
+        [
+          1184,
+          2240
+        ],
+        [
+          1184,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "state_code",
+        "0"
+      ],
+      "original_value": "PWL(0 1 50.00004 1 50.00005 2 110.00004 2 110.00005 3 185.00004 3 185.00005 9 186.00004 9 186.00005 4 261.00004 4 261.00005 9 262.00004 9 262.00005 5 337.00004 5 337.00005 9 338.00004 9 338.00005 6 413.00004 6 413.00005 9 414.00004 9 414.00005 7 489.00004 7 489.00005 9 490.00004 9 490.00005 8 565.00004 8 565.00005 9 566.00004 9 566.00005 10 626.00004 10 626.00005 11 676 11)",
+      "behavioral_wrapper": false
+    },
+    "V_point_code": {
+      "source_name": "V_point_code",
+      "instance": "V_point_code",
+      "nodes": [
+        "point_code",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_point_code.txt",
+      "pins": [
+        [
+          1536,
+          2240
+        ],
+        [
+          1536,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "point_code",
+        "0"
+      ],
+      "original_value": "PWL(0 0 10.00004 0 10.00005 1 20.00004 1 20.00005 2 30.00004 2 30.00005 3 40.00004 3 40.00005 4 50.00004 4 50.00005 0 125.00004 0 125.00005 1 140.00004 1 140.00005 2 155.00004 2 155.00005 3 170.00004 3 170.00005 4 185.00004 4 185.00005 0 201.00004 0 201.00005 1 216.00004 1 216.00005 2 231.00004 2 231.00005 3 246.00004 3 246.00005 4 261.00004 4 261.00005 0 277.00004 0 277.00005 1 292.00004 1 292.00005 2 307.00004 2 307.00005 3 322.00004 3 322.00005 4 337.00004 4 337.00005 0 353.00004 0 353.00005 1 368.00004 1 368.00005 2 383.00004 2 383.00005 3 398.00004 3 398.00005 4 413.00004 4 413.00005 0 429.00004 0 429.00005 1 444.00004 1 444.00005 2 459.00004 2 459.00005 3 474.00004 3 474.00005 4 489.00004 4 489.00005 0 505.00004 0 505.00005 1 520.00004 1 520.00005 2 535.00004 2 535.00005 3 550.00004 3 550.00005 4 565.00004 4 565.00005 0 636.00004 0 636.00005 1 646.00004 1 646.00005 2 656.00004 2 656.00005 3 666.00004 3 666.00005 4 676 4)",
+      "behavioral_wrapper": false
+    },
+    "V_reverse": {
+      "source_name": "V_reverse",
+      "instance": "V_reverse",
+      "nodes": [
+        "reverse",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_reverse.txt",
+      "pins": [
+        [
+          1888,
+          2240
+        ],
+        [
+          1888,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "reverse",
+        "0"
+      ],
+      "original_value": "PWL(0 0 338.00004 0 338.00005 1 413.00004 1 413.00005 0 414.00004 0 414.00005 1 489.00004 1 489.00005 0 490.00004 0 490.00005 1 565.00004 1 565.00005 0 676 0)",
+      "behavioral_wrapper": false
+    },
+    "V_cal_role": {
+      "source_name": "V_cal_role",
+      "instance": "V_cal_role",
+      "nodes": [
+        "cal_role",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_cal_role.txt",
+      "pins": [
+        [
+          2240,
+          2240
+        ],
+        [
+          2240,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "cal_role",
+        "0"
+      ],
+      "original_value": "PWL(0 1 20.00004 1 20.00005 2 40.00004 2 40.00005 3 50.00004 3 50.00005 0 626.00004 0 626.00005 1 646.00004 1 646.00005 2 666.00004 2 666.00005 3 676 3)",
+      "behavioral_wrapper": false
+    },
+    "V_recovery_after": {
+      "source_name": "V_recovery_after",
+      "instance": "V_recovery_after",
+      "nodes": [
+        "recovery_after",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_recovery_after.txt",
+      "pins": [
+        [
+          2592,
+          2240
+        ],
+        [
+          2592,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "recovery_after",
+        "0"
+      ],
+      "original_value": "PWL(0 0 185.00004 0 185.00005 3 186.00004 3 186.00005 0 261.00004 0 261.00005 4 262.00004 4 262.00005 0 337.00004 0 337.00005 5 338.00004 5 338.00005 0 413.00004 0 413.00005 6 414.00004 6 414.00005 0 489.00004 0 489.00005 7 490.00004 7 490.00005 0 565.00004 0 565.00005 8 566.00004 8 566.00005 0 676 0)",
+      "behavioral_wrapper": false
+    },
+    "V_attempt": {
+      "source_name": "V_attempt",
+      "instance": "V_attempt",
+      "nodes": [
+        "attempt",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/V_attempt.txt",
+      "pins": [
+        [
+          2944,
+          2240
+        ],
+        [
+          2944,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "attempt",
+        "0"
+      ],
+      "original_value": "PWL(0 0 676 0)",
+      "behavioral_wrapper": false
+    },
+    "Vreset": {
+      "source_name": "Vreset",
+      "instance": "Vreset",
+      "nodes": [
+        "reset",
+        "0"
+      ],
+      "value": "PWL FILE=stimuli/Vreset.txt",
+      "pins": [
+        [
+          3296,
+          2240
+        ],
+        [
+          3296,
+          2320
+        ]
+      ],
+      "original_nodes": [
+        "reset",
+        "0"
+      ],
+      "original_value": "0",
+      "behavioral_wrapper": false
+    },
+    "Vnom_gain": {
+      "source_name": "Vnom_gain",
+      "instance": "Vnom_gain",
+      "nodes": [
+        "nom_gain",
+        "0"
+      ],
+      "value": "1",
+      "pins": [
+        [
+          2432,
+          2592
+        ],
+        [
+          2432,
+          2672
+        ]
+      ],
+      "original_nodes": [
+        "nom_gain",
+        "0"
+      ],
+      "original_value": "1",
+      "behavioral_wrapper": false
+    },
+    "Vadc_range": {
+      "source_name": "Vadc_range",
+      "instance": "Vadc_range",
+      "nodes": [
+        "adc_range",
+        "0"
+      ],
+      "value": "5",
+      "pins": [
+        [
+          2784,
+          2592
+        ],
+        [
+          2784,
+          2672
+        ]
+      ],
+      "original_nodes": [
+        "adc_range",
+        "0"
+      ],
+      "original_value": "5",
+      "behavioral_wrapper": false
+    },
+    "Vadc_rate": {
+      "source_name": "Vadc_rate",
+      "instance": "Vadc_rate",
+      "nodes": [
+        "adc_rate",
+        "0"
+      ],
+      "value": "20",
+      "pins": [
+        [
+          3136,
+          2592
+        ],
+        [
+          3136,
+          2672
+        ]
+      ],
+      "original_nodes": [
+        "adc_rate",
+        "0"
+      ],
+      "original_value": "20",
+      "behavioral_wrapper": false
+    }
+  },
+  "routing": {
+    "adc_range": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "adc_rate": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "attempt": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "cal_role": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "eta_truth": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "i_meas": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "i_true": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "nom_gain": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "point_code": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "recovery_after": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "reset": {
+      "terminals": 1,
+      "connections": 0
+    },
+    "actual": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "actual_hold": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "cal_select": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "calmetal": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "ce": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "conditioned": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "drive": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "drive_amp": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "nunit": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "req": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "reverse": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "state_code": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "target": {
+      "terminals": 2,
+      "connections": 1
+    },
+    "adc_hold": {
+      "terminals": 3,
+      "connections": 2
+    },
+    "clock": {
+      "terminals": 3,
+      "connections": 2
+    },
+    "metal": {
+      "terminals": 3,
+      "connections": 2
+    },
+    "re_buf": {
+      "terminals": 3,
+      "connections": 2
+    },
+    "sample_select": {
+      "terminals": 3,
+      "connections": 2
+    },
+    "adc": {
+      "terminals": 4,
+      "connections": 3
+    },
+    "cellmetal": {
+      "terminals": 4,
+      "connections": 3
+    },
+    "mid_raw": {
+      "terminals": 4,
+      "connections": 3
+    },
+    "surf": {
+      "terminals": 4,
+      "connections": 3
+    },
+    "tia": {
+      "terminals": 4,
+      "connections": 3
+    },
+    "re": {
+      "terminals": 5,
+      "connections": 4
+    },
+    "we": {
+      "terminals": 5,
+      "connections": 4
+    },
+    "vmid": {
+      "terminals": 6,
+      "connections": 5
+    },
+    "vcc": {
+      "terminals": 6,
+      "connections": 5
+    },
+    "0": {
+      "terminals": 38,
+      "connections": 37
+    }
+  }
+}

@@ -1,0 +1,18 @@
+P1 TIA known positive/negative 100nA current calibration
+.include ../models/p1_opamp.lib
+Vcc vcc 0 5
+Vmid vmid 0 2.5
+* A current source leaving the WE node yields POSITIVE output relative to vmid.
+Itest we 0 PWL(0 0 0.1 0 0.10001 100n 0.3 100n 0.30001 -100n 0.5 -100n)
+Xtia vmid we vcc 0 tia P1_OP
+Rf tia we 1Meg
+Cf tia we 100p
+Rfilter tia adc 1k
+Cfilter adc 0 1u
+.options plotwinsize=0
+.tran 0 0.5 0 10u
+.save V(we) V(tia) V(adc) V(vmid)
+.meas tran out_positive AVG V(tia) FROM=0.25 TO=0.29
+.meas tran out_negative AVG V(tia) FROM=0.45 TO=0.49
+.meas tran transimpedance PARAM (out_positive-out_negative)/200n
+.end

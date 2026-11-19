@@ -1,0 +1,710 @@
+{
+  "scope": "small deterministic pilot, not a statistical superiority claim",
+  "input": "identical native A1 observations per attempt; all truth joined after the decision",
+  "numerical_error_criterion": 0.05,
+  "metrics": {
+    "P3_gated_last_quarter_OLS": {
+      "evaluable_attempts": 18,
+      "released": 9,
+      "coverage": 0.5,
+      "released_with_error_over_5_percent": 0,
+      "numerical_false_acceptance_denominator": 5,
+      "numerical_false_acceptance_numerator": 0,
+      "withheld_with_error_at_most_5_percent": 4,
+      "numerically_good_denominator": 13,
+      "definition": "Numerical error criterion only, not ground truth for calibration/recovery/timeouts. A small slope error can coexist with a real quality fault."
+    },
+    "last_quarter_OLS": {
+      "evaluable_attempts": 18,
+      "released": 18,
+      "coverage": 1.0,
+      "released_with_error_over_5_percent": 5,
+      "numerical_false_acceptance_denominator": 5,
+      "numerical_false_acceptance_numerator": 5,
+      "withheld_with_error_at_most_5_percent": 0,
+      "numerically_good_denominator": 13,
+      "definition": "Numerical error criterion only, not ground truth for calibration/recovery/timeouts. A small slope error can coexist with a real quality fault."
+    },
+    "last_sample": {
+      "evaluable_attempts": 18,
+      "released": 18,
+      "coverage": 1.0,
+      "released_with_error_over_5_percent": 5,
+      "numerical_false_acceptance_denominator": 5,
+      "numerical_false_acceptance_numerator": 5,
+      "withheld_with_error_at_most_5_percent": 0,
+      "numerically_good_denominator": 13,
+      "definition": "Numerical error criterion only, not ground truth for calibration/recovery/timeouts. A small slope error can coexist with a real quality fault."
+    },
+    "whole_point_mean": {
+      "evaluable_attempts": 18,
+      "released": 18,
+      "coverage": 1.0,
+      "released_with_error_over_5_percent": 18,
+      "numerical_false_acceptance_denominator": 18,
+      "numerical_false_acceptance_numerator": 18,
+      "withheld_with_error_at_most_5_percent": 0,
+      "numerically_good_denominator": 0,
+      "definition": "Numerical error criterion only, not ground truth for calibration/recovery/timeouts. A small slope error can coexist with a real quality fault."
+    }
+  },
+  "rows": [
+    {
+      "case": "nominal_healthy",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 110000.8858761485,
+      "relative_error": 8.053419532583206e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "nominal_healthy",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 75987.54758145231,
+      "relative_error": -0.30920411289588756,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "nominal_healthy",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 110000.58112871797,
+      "relative_error": 5.282988345900463e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "nominal_healthy",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 110000.58112871797,
+      "relative_error": 5.282988345900463e-06,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "conductivity_low",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 119956.4364049089,
+      "relative_error": -0.00036302995909209823,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "conductivity_low",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 85106.02742038383,
+      "relative_error": -0.2907831048301345,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "conductivity_low",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 119835.52999123125,
+      "relative_error": -0.0013705834064059452,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "conductivity_low",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 119835.52999123125,
+      "relative_error": -0.0013705834064059452,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "conductivity_high",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 105001.00507056707,
+      "relative_error": 9.572100639010372e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "conductivity_high",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 71822.14578560542,
+      "relative_error": -0.31597956394661486,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "conductivity_high",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 105001.1551371982,
+      "relative_error": 1.1001306649882636e-05,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "conductivity_high",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 105001.1551371982,
+      "relative_error": 1.1001306649882636e-05,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "recoverable",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 107284.48703418576,
+      "relative_error": -0.02468648150740138,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "recoverable",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 41726.09786416431,
+      "relative_error": -0.620671837598506,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "recoverable",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 104244.05516545275,
+      "relative_error": -0.0523267712231561,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "recoverable",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 104244.05516545275,
+      "relative_error": -0.0523267712231561,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "recoverable",
+      "attempt": "attempt_1",
+      "method": "last_sample",
+      "estimate_ohm": 110000.70055096959,
+      "relative_error": 6.3686451787781095e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "recoverable",
+      "attempt": "attempt_1",
+      "method": "whole_point_mean",
+      "estimate_ohm": 75536.9297383303,
+      "relative_error": -0.3133006387424512,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "recoverable",
+      "attempt": "attempt_1",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 110000.46766296886,
+      "relative_error": 4.2514815359329106e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "recoverable",
+      "attempt": "attempt_1",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 110000.46766296886,
+      "relative_error": 4.2514815359329106e-06,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "persistent",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 20459.77782509816,
+      "relative_error": -0.8140020197718347,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "persistent",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 13988.276784152178,
+      "relative_error": -0.8728338474167983,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "persistent",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 18747.70935009272,
+      "relative_error": -0.8295662786355206,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "persistent",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 18747.70935009272,
+      "relative_error": -0.8295662786355206,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "persistent",
+      "attempt": "attempt_1",
+      "method": "last_sample",
+      "estimate_ohm": 67427.74012817525,
+      "relative_error": -0.3870205442893154,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "persistent",
+      "attempt": "attempt_1",
+      "method": "whole_point_mean",
+      "estimate_ohm": 25184.331562665604,
+      "relative_error": -0.7710515312484943,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "persistent",
+      "attempt": "attempt_1",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 57503.07352025612,
+      "relative_error": -0.4772447861794894,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "persistent",
+      "attempt": "attempt_1",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 57503.07352025612,
+      "relative_error": -0.4772447861794894,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "gain_fault",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 91667.9268529317,
+      "relative_error": -0.16665521042789289,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "gain_fault",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 63323.11188562986,
+      "relative_error": -0.4243353464942735,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "gain_fault",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 91667.14672033946,
+      "relative_error": -0.1666623025423679,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "gain_fault",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 91667.14672033946,
+      "relative_error": -0.1666623025423679,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "offset_fault",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 110000.85686518563,
+      "relative_error": 7.789683506453926e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "offset_fault",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 75987.63074283258,
+      "relative_error": -0.30920335688333966,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "offset_fault",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 110000.58577555469,
+      "relative_error": 5.325232316222284e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "offset_fault",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 110000.58577555469,
+      "relative_error": 5.325232316222284e-06,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "moderate_noise",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 109202.46915617415,
+      "relative_error": -0.00725028039841602,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 75756.26898762948,
+      "relative_error": -0.31130664556700427,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 109451.18686742903,
+      "relative_error": -0.004989210296098889,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 109451.18686742903,
+      "relative_error": -0.004989210296098889,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "high_noise",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 42901.199469892636,
+      "relative_error": -0.6099890957282484,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "high_noise",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 70989.57503346914,
+      "relative_error": -0.35464022696846187,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "high_noise",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 95327.29442266516,
+      "relative_error": -0.13338823252122511,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "high_noise",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 95327.29442266516,
+      "relative_error": -0.13338823252122511,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "timeout",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 110000.99745644367,
+      "relative_error": 9.067785852412413e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "timeout",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 91456.83164151305,
+      "relative_error": -0.16857425780442614,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "timeout",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 110000.9513153869,
+      "relative_error": 8.648321699888939e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "timeout",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 110000.9513153869,
+      "relative_error": 8.648321699888939e-06,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "reset",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": null,
+      "relative_error": null,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "reference_near",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 105001.15229881484,
+      "relative_error": 1.0974274427200115e-05,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reference_near",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 71822.06828057863,
+      "relative_error": -0.31598030208972705,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reference_near",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 105001.15435625068,
+      "relative_error": 1.0993869054454208e-05,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reference_near",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 105001.15435625068,
+      "relative_error": 1.0993869054454208e-05,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "reference_far",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 114996.72666304353,
+      "relative_error": -2.846379962051504e-05,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reference_far",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 80488.2398939967,
+      "relative_error": -0.3001022617913325,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reference_far",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 114974.51100232544,
+      "relative_error": -0.00022164345803876717,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reference_far",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 114974.51100232544,
+      "relative_error": -0.00022164345803876717,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "moderate_noise_seed7",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 113019.86942048655,
+      "relative_error": 0.027453358368060288,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise_seed7",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 75575.11077522961,
+      "relative_error": -0.312953538407003,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise_seed7",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 110272.68324096069,
+      "relative_error": 0.002478938554188792,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise_seed7",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 110272.68324096069,
+      "relative_error": 0.002478938554188792,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "moderate_noise_seed101",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 99474.06327128502,
+      "relative_error": -0.09569033389740822,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise_seed101",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 75828.09474653228,
+      "relative_error": -0.3106536841224332,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise_seed101",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 110176.76132664028,
+      "relative_error": 0.0016069211512761417,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "moderate_noise_seed101",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 110176.76132664028,
+      "relative_error": 0.0016069211512761417,
+      "released": true,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "reverse_gain_fault",
+      "attempt": "attempt_0",
+      "method": "last_sample",
+      "estimate_ohm": 110000.8858761485,
+      "relative_error": 8.053419532583206e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reverse_gain_fault",
+      "attempt": "attempt_0",
+      "method": "whole_point_mean",
+      "estimate_ohm": 75987.54758145231,
+      "relative_error": -0.30920411289588756,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reverse_gain_fault",
+      "attempt": "attempt_0",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 110000.58112871797,
+      "relative_error": 5.282988345900463e-06,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reverse_gain_fault",
+      "attempt": "attempt_0",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 110000.58112871797,
+      "relative_error": 5.282988345900463e-06,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    },
+    {
+      "case": "reverse_gain_fault",
+      "attempt": "attempt_1",
+      "method": "last_sample",
+      "estimate_ohm": 110001.27010136713,
+      "relative_error": 1.154637606570752e-05,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reverse_gain_fault",
+      "attempt": "attempt_1",
+      "method": "whole_point_mean",
+      "estimate_ohm": 97282.26755929728,
+      "relative_error": -0.11561574946093311,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reverse_gain_fault",
+      "attempt": "attempt_1",
+      "method": "last_quarter_OLS",
+      "estimate_ohm": 110001.10268964552,
+      "relative_error": 1.0024451323698003e-05,
+      "released": true,
+      "qualification": "unconditional numerical baseline, no quality gates"
+    },
+    {
+      "case": "reverse_gain_fault",
+      "attempt": "attempt_1",
+      "method": "P3_gated_last_quarter_OLS",
+      "estimate_ohm": 110001.10268964552,
+      "relative_error": 1.0024451323698003e-05,
+      "released": false,
+      "qualification": "unchanged P3 policy"
+    }
+  ]
+}

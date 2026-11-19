@@ -1,0 +1,9 @@
+P1 small-signal resistor-noise illustration, NOT complete op-amp noise prediction
+* This ideal linear TIA has no op-amp input voltage/current noise.
+Itest we 0 AC 1
+Eamp tia 0 0 we 100k
+Rf tia we 1Meg
+Cf tia we 100p
+.temp 27
+.noise V(tia) Itest dec 100 0.1 10k
+.end

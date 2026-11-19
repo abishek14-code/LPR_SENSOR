@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-09-20T14:49:15.132003+00:00",
+  "python_version": "3.12.14",
+  "os": "Linux",
+  "test_exit_code": 0,
+  "native_ltspice_executed": false,
+  "native_waveform_validation": "PENDING",
+  "warning": "These are software, source-dependency and mathematical checks only."
+}

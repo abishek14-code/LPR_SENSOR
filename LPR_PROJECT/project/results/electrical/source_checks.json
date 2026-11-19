@@ -1,0 +1,131 @@
+{
+  "provenance": "STATIC_SOURCE_CHECK_ONLY",
+  "cases": [
+    {
+      "circuit": "00_cell_analytical.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "01_midpoint_load.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "02_tia_calibration.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "03_healthy.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "04_gain_step.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "05_offset_step.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "06_frontend_slow.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "07_high_cdl.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "08_low_signal_noise.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "09_switch_disturbance.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "10_mixed_fault.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "11_ru_sweep.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "12_rp_sweep.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "13_cdl_sweep.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "14_known_resistance.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "15_gain_known_reference.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "16_noise_only.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "17_repeatability.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "18_nonlinear_challenge.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "19_adc_filter_ac.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    },
+    {
+      "circuit": "20_tia_resistor_noise.cir",
+      "dependency_check": "PASS",
+      "ltspice_execution": "NOT_RUN",
+      "waveform_validation": "PENDING"
+    }
+  ]
+}

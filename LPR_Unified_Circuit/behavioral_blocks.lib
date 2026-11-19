@@ -1,0 +1,24 @@
+* Behavioral source equations preserved; explicit sense pins added for wiring.
+.subckt LPR_TARGET vmid req target gnd
+Btarget target gnd V=V(vmid)-V(req)
+.ends LPR_TARGET
+
+.subckt LPR_SELECT sample_select cal_select gnd
+Bcal_select cal_select gnd V=1-V(sample_select)
+.ends LPR_SELECT
+
+.subckt LPR_CONDITION vmid tia reverse nunit state_code conditioned gnd
+Bcondition conditioned gnd V=V(vmid)+GAIN*if(V(reverse)>.5,REVERSEGAIN,1)*(V(tia)-V(vmid))+OFFSET+NOISE*V(nunit)+if(UNSTABLE>0,if(abs(V(state_code)-9)<.1,.1*sin(2*pi*time*2),0),0)
+.ends LPR_CONDITION
+
+.subckt LPR_VOLTAGE we re actual gnd
+Bactual actual gnd V=V(we,re)
+.ends LPR_VOLTAGE
+
+.subckt LPR_CURRENT adc_hold vmid i_meas gnd
+Bmeas i_meas gnd V=(V(adc_hold)-V(vmid))/RF
+.ends LPR_CURRENT
+
+.subckt LPR_ETA cellmetal surf eta_truth gnd
+Binterface eta_truth gnd V=V(cellmetal,surf)
+.ends LPR_ETA
