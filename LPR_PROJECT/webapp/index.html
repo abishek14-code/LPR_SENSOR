@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LPR 3D Simulator</title>
+<link rel="stylesheet" href="/static/style.css">
+<script type="importmap">
+{ "imports": { "three": "/vendor/three.module.js",
+               "three/addons/controls/OrbitControls.js": "/vendor/OrbitControls.js",
+               "three/addons/renderers/CSS2DRenderer.js": "/vendor/CSS2DRenderer.js" } }
+</script>
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>LPR sensor · 3D simulator</h1>
+    <p class="sub">Every value on this page comes from a real run: ElmerSolver (water field), native LTspice (potentiostat circuit) and Darshan's checks, driven by Python.</p>
+  </div>
+  <label class="runpick">Run shown
+    <select id="runSelect"></select>
+  </label>
+</header>
+
+<main class="layout">
+  <section class="panel controls" aria-label="Inputs">
+    <h2>Shared inputs</h2>
+    <label class="field">Scenario
+      <select id="scenario"></select>
+      <span class="hint" id="scenarioHint"></span>
+    </label>
+    <div class="slider" data-key="conductivity">
+      <div class="row"><span>Water conductivity</span><output id="o_conductivity"></output></div>
+      <input type="range" id="s_conductivity" aria-label="Water conductivity" min="0" max="1000" step="1">
+    </div>
+    <div class="slider" data-key="area">
+      <div class="row"><span>Steel exposed area</span><output id="o_area"></output></div>
+      <input type="range" id="s_area" aria-label="Steel exposed area" min="0" max="1000" step="1">
+    </div>
+    <div class="slider" data-key="gap">
+      <div class="row"><span>WE–CE gap</span><output id="o_gap"></output></div>
+      <input type="range" id="s_gap" aria-label="WE to CE gap" min="10" max="48" step="1">
+    </div>
+    <div class="slider" data-key="reference_distance">
+      <div class="row"><span>RE distance from WE</span><output id="o_reference_distance"></output></div>
+      <input type="range" id="s_reference_distance" aria-label="RE distance from WE" min="1" max="47" step="0.5">
+    </div>
+    <label class="check"><input type="checkbox" id="overlap"> Start LTspice while the Elmer uncertainty solves finish</label>
+    <p class="hint" id="changedNote"></p>
+    <div class="buttons">
+      <button id="runBtn" class="primary">Run Elmer → LTspice → Darshan</button>
+      <button id="resetBtn" class="ghost">Reset to sourced defaults</button>
+    </div>
+    <p class="error" id="runError" role="alert"></p>
+
+    <h2>Flowchart progress</h2>
+    <ol class="flow" id="flow"></ol>
+    <pre class="log" id="log" hidden></pre>
+  </section>
+
+  <section class="panel viewport" aria-label="3D cell">
+    <div id="three" class="three"></div>
+    <div class="overlay top-left" id="readout"></div>
+    <div class="overlay top-right">
+      <label class="check"><input type="checkbox" id="t_field" checked> Field slice</label>
+      <label class="check"><input type="checkbox" id="t_flow" checked> Current flow</label>
+      <label class="check"><input type="checkbox" id="t_labels" checked> Labels</label>
+    </div>
+    <div class="overlay bottom-left" id="colorbar">
+      <div class="cbtitle">Water potential vs WE (mV)</div>
+      <canvas id="cbcanvas" width="220" height="14"></canvas>
+      <div class="cbticks"><span id="cbmin"></span><span>0</span><span id="cbmax"></span></div>
+    </div>
+    <div class="overlay bottom-right hint" id="scaleNote"></div>
+  </section>
+
+  <section class="panel results" aria-label="Decision">
+    <h2>Decision</h2>
+    <div id="decision"></div>
+    <h2>Elmer: effective Ru</h2>
+    <div id="ru"></div>
+    <h2>Parameter sources</h2>
+    <div id="audit"></div>
+    <p><a id="reportLink" target="_blank" rel="noopener">Open full run report</a></p>
+  </section>
+
+  <section class="panel waves" aria-label="LTspice waveforms">
+    <div class="wavehead">
+      <h2>LTspice measured channels</h2>
+      <div class="tabs" id="attemptTabs" role="tablist"></div>
+      <div class="play">
+        <button id="playBtn" class="ghost" aria-label="Play">▶</button>
+        <select id="speed" aria-label="Playback speed">
+          <option value="1">1×</option><option value="5">5×</option><option value="20" selected>20×</option><option value="60">60×</option>
+        </select>
+        <input type="range" id="timeSlider" min="0" max="1000" value="0" aria-label="Simulation time">
+        <output id="timeOut"></output>
+      </div>
+    </div>
+    <canvas id="chartV" class="chart"></canvas>
+    <canvas id="chartI" class="chart"></canvas>
+    <div class="legend" id="legend"></div>
+  </section>
+</main>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

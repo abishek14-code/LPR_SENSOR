@@ -1,6 +1,20 @@
-.DS_Store
+# Python
 __pycache__/
 *.py[cod]
 .venv/
 venv/
-outputs/
+.pytest_cache/
+
+# Run outputs (every run writes a new folder here)
+LPR_PROJECT/evidence/
+
+# LTspice / Elmer generated files
+*.raw
+*.log
+*.op.raw
+*.vtu
+*.net
+*.plt
+
+# macOS
+.DS_Store

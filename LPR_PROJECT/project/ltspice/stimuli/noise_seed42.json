@@ -1,9 +1,0 @@
-{
-  "seed": 42,
-  "sample_hz": 200,
-  "duration_s": 56,
-  "rms_continuous_before_scaling": 1.0,
-  "interpolation": "linear",
-  "provenance": "GENERATED_STIMULUS_NOT_SIMULATOR_OUTPUT",
-  "sha256": "27c678965cea5a81d7636e6f27704130a6570cb7003231954f68de3781bc0df3"
-}

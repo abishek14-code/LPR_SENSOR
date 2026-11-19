@@ -1,0 +1,48 @@
+{
+  "schema": "lpr-flowchart-shared-inputs-v1",
+  "purpose": "Single source of the shared inputs in the project flowchart. Both the Elmer geometry/water-field stage and the cell-interface stage read this file. Edit values here, not in the stage code.",
+  "steel": {
+    "exposed_area_m2": 2.0e-06,
+    "area_relative_half_width": 0.01,
+    "note": "Wetted working-electrode (steel) face area. The planar Elmer fixture uses out-of-plane depth = exposed_area_m2 / electrode_width_m. The nominal value reproduces the validated 40 mm x 50 um fixture face. Larger areas raise current and can saturate the 1 Mohm TIA; Darshan's saturation check then rejects the run."
+  },
+  "water": {
+    "conductivity_S_m": 1.0,
+    "conductivity_relative_half_width": 0.01,
+    "temperature_C": 25.0,
+    "note": "Declared bulk water conductivity. Not measured. Uniform and temperature-independent in the model."
+  },
+  "electrode_geometry": {
+    "electrode_width_m": 0.04,
+    "we_to_ce_gap_m": 0.04,
+    "reference_distance_from_we_m": 0.02,
+    "width_relative_half_width": 0.01,
+    "reference_distance_relative_half_width": 0.01,
+    "supported_gap_range_m": [0.01, 0.048],
+    "note": "Parallel planar WE and CE separated by the gap; non-loading RE point on the centreline at reference_distance_from_we_m. The supplied connected Elmer mesh is mapped affinely to these dimensions (topology and boundary IDs unchanged)."
+  },
+  "uncertainty_basis": "independent rectangular engineering assumptions (half-widths above), not measured tolerances",
+  "cell_interface": {
+    "mode": "assumed",
+    "calibration_file": null,
+    "calibration_file_note": "Set mode to 'calibrated' and calibration_file to a JSON with Rp_ohm, Cdl_F, stern_geary_B_V and their *_standard_uncertainty values plus a 'source' string to replace the assumed values below.",
+    "assumed": {
+      "Rp_ohm": 100000.0,
+      "Cdl_specific_F_per_cm2": 4.0e-05,
+      "stern_geary_B_V": 0.026,
+      "stern_geary_B_range_V": [0.019, 0.033],
+      "source": "EXPLICITLY ASSUMED. Rp is the simulated cell value of the validated fixture. Cdl = 40 uF/cm2 x steel area (upper end of the 10-40 uF/cm2 range for metal electrodes, Bard & Faulkner 2001). B = 26 mV for actively corroding steel follows Stern & Geary (1957) with Tafel slopes of 120 mV/decade, as used by Andrade & Alonso (2004); the range is a declared bound, not a measured Tafel result. See configs/PARAMETER_SOURCES.json."
+    }
+  },
+  "corrosion_conversion": {
+    "equivalent_weight_g_per_eq": 27.92,
+    "density_g_cm3": 7.87,
+    "K_mm_g_per_uA_cm_yr": 0.00327,
+    "basis": "ASTM G102 uniform-corrosion conversion for iron (Fe -> Fe2+). Applied only after ACCEPT.",
+    "conditions": [
+      "uniform corrosion over the declared exposed area",
+      "Stern-Geary B as declared above (assumed unless calibrated)",
+      "Rp from the simulated cell, not from a physical specimen"
+    ]
+  }
+}

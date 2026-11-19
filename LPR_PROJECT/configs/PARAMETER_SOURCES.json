@@ -1,0 +1,399 @@
+{
+  "schema": "lpr-parameter-sources-v1",
+  "status_legend": {
+    "LITERATURE": "value or rule taken from a cited paper or standard",
+    "ESTABLISHED_CONCEPT": "follows from standard physics or metrology; reference given",
+    "ASSUMED": "declared for the simulation; no source supports this specific value",
+    "ENGINEERING_SETTING": "a design or threshold choice inside the team's code; not from a paper",
+    "CONFLICTS_WITH_LITERATURE": "used as-is to keep the validated fixture intact, but outside typical published values"
+  },
+  "sources": {
+    "SternGeary1957": "M. Stern, A.L. Geary, Electrochemical polarization I. A theoretical analysis of the shape of polarization curves, J. Electrochem. Soc. 104(1) (1957) 56-63.",
+    "ASTM_G102": "ASTM G102-89 (reapproved), Standard Practice for Calculation of Corrosion Rates and Related Information from Electrochemical Measurements. ASTM International.",
+    "ASTM_G59": "ASTM G59-97 (reapproved), Standard Test Method for Conducting Potentiodynamic Polarization Resistance Measurements. ASTM International.",
+    "Mansfeld1976": "F. Mansfeld, The polarization resistance technique for measuring corrosion currents, in: Advances in Corrosion Science and Technology, vol. 6, Plenum, 1976, pp. 163-262.",
+    "AndradeAlonso2004": "C. Andrade, C. Alonso, Test methods for on-site corrosion rate measurement of steel reinforcement in concrete by means of the polarization resistance method (RILEM TC 154-EMC), Materials and Structures 37 (2004) 623-643.",
+    "BardFaulkner2001": "A.J. Bard, L.R. Faulkner, Electrochemical Methods: Fundamentals and Applications, 2nd ed., Wiley, 2001.",
+    "Randles1947": "J.E.B. Randles, Kinetics of rapid electrode reactions, Discuss. Faraday Soc. 1 (1947) 11-19.",
+    "UNESCO1981": "UNESCO, Background papers and supporting data on the Practical Salinity Scale 1978, Technical Papers in Marine Science 37, 1981.",
+    "GUM2008": "JCGM 100:2008, Evaluation of measurement data - Guide to the expression of uncertainty in measurement (GUM).",
+    "ElmerModels": "CSC - IT Center for Science, Elmer Models Manual, chapter 'Static Current Conduction' (StatCurrentSolver).",
+    "Roache1998": "P.J. Roache, Verification and Validation in Computational Science and Engineering, Hermosa Publishers, 1998.",
+    "IEC60062": "IEC 60062, Marking codes for resistors and capacitors (tolerance code B = 0.1 %)."
+  },
+  "parameters": {
+    "water.conductivity_S_m": {
+      "value": 1.0,
+      "unit": "S/m",
+      "used_in": [
+        "A"
+      ],
+      "status": "ASSUMED",
+      "sources": [
+        "UNESCO1981"
+      ],
+      "basis": "Lies between fresh water (about 0.005-0.05 S/m) and standard seawater (about 5 S/m at 35 salinity, 25 C, from the PSS-78 conductivity ratio). It represents brackish water; no specific water sample was measured."
+    },
+    "water.conductivity_relative_half_width": {
+      "value": 0.01,
+      "unit": "-",
+      "used_in": [
+        "A"
+      ],
+      "status": "ASSUMED",
+      "sources": [
+        "GUM2008"
+      ],
+      "basis": "Rectangular half-width converted with u = a/sqrt(3) per GUM 4.3.7; the 1 % magnitude itself is not measured."
+    },
+    "steel.exposed_area_m2": {
+      "value": 2e-06,
+      "unit": "m2",
+      "used_in": [
+        "A",
+        "D"
+      ],
+      "status": "ASSUMED",
+      "sources": [],
+      "basis": "0.02 cm2 face of the validated 40 mm x 50 um planar fixture. Chosen so cell currents stay inside the 1 Mohm TIA range; not a specimen dimension."
+    },
+    "steel.area_relative_half_width": {
+      "value": 0.01,
+      "unit": "-",
+      "used_in": [
+        "A",
+        "D"
+      ],
+      "status": "ASSUMED",
+      "sources": [
+        "GUM2008"
+      ],
+      "basis": "Declared rectangular tolerance."
+    },
+    "electrode_geometry.we_to_ce_gap_m": {
+      "value": 0.04,
+      "unit": "m",
+      "used_in": [
+        "A"
+      ],
+      "status": "ASSUMED",
+      "sources": [],
+      "basis": "Validated fixture geometry carried over from configs/physical_integration.json."
+    },
+    "electrode_geometry.reference_distance_from_we_m": {
+      "value": 0.02,
+      "unit": "m",
+      "used_in": [
+        "A"
+      ],
+      "status": "ASSUMED",
+      "sources": [
+        "BardFaulkner2001"
+      ],
+      "basis": "Mid-gap non-loading RE. Practice places the RE (Luggin tip) close to the WE to reduce Ru; the mid-gap position is a deliberate worst case that makes Ru correction necessary."
+    },
+    "electrode_geometry.width_m": {
+      "value": 0.04,
+      "unit": "m",
+      "used_in": [
+        "A"
+      ],
+      "status": "ASSUMED",
+      "sources": [],
+      "basis": "Validated fixture geometry."
+    },
+    "geometry_relative_half_widths": {
+      "value": 0.01,
+      "unit": "-",
+      "used_in": [
+        "A"
+      ],
+      "status": "ASSUMED",
+      "sources": [
+        "GUM2008"
+      ],
+      "basis": "Declared rectangular tolerances for width and RE distance."
+    },
+    "Ru_model": {
+      "value": "Ru = r / (sigma * A)",
+      "unit": "ohm",
+      "used_in": [
+        "A"
+      ],
+      "status": "ESTABLISHED_CONCEPT",
+      "sources": [
+        "BardFaulkner2001",
+        "ElmerModels"
+      ],
+      "basis": "Ohmic conduction in a uniform planar field. Elmer StatCurrentSolver solves div(sigma grad phi)=0; Ru is extracted from the solved field and checked against the closed form (P4) within 1 %."
+    },
+    "elmer.mesh_refinement_check": {
+      "value": "1-to-4 refinement, change < 1 %",
+      "unit": "-",
+      "used_in": [
+        "A"
+      ],
+      "status": "ESTABLISHED_CONCEPT",
+      "sources": [
+        "Roache1998"
+      ],
+      "basis": "Solution-verification by systematic mesh refinement; the 1 % gate is the team's engineering setting."
+    },
+    "uncertainty_combination": {
+      "value": "root-sum-square of independent standard uncertainties",
+      "unit": "-",
+      "used_in": [
+        "A",
+        "D"
+      ],
+      "status": "ESTABLISHED_CONCEPT",
+      "sources": [
+        "GUM2008"
+      ],
+      "basis": "GUM law of propagation for uncorrelated inputs."
+    },
+    "cell.Rp_ohm": {
+      "value": 100000.0,
+      "unit": "ohm",
+      "used_in": [
+        "B",
+        "C"
+      ],
+      "status": "ASSUMED",
+      "sources": [],
+      "basis": "Gives Rp*A = 2 kohm.cm2 and about 0.15 mm/yr with B = 26 mV, a plausible order for carbon steel in near-neutral water, but no paper gives this value for this system."
+    },
+    "cell.Cdl_specific_F_per_cm2": {
+      "value": 4e-05,
+      "unit": "F/cm2",
+      "used_in": [
+        "B",
+        "C"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "BardFaulkner2001"
+      ],
+      "basis": "Typical double-layer capacitance of a metal electrode is about 10-40 uF/cm2 (Bard & Faulkner 2001); the upper value is used. Cdl_F = 40 uF/cm2 x 0.02 cm2 = 0.8 uF, giving tau = (Ru*Rp/(Ru+Rp))*Cdl = 7.3 ms. Replaces the earlier 100 uF (5000 uF/cm2), which was about 100x the published range."
+    },
+    "cell.model": {
+      "value": "Randles: Ru in series with (Rp || Cdl)",
+      "unit": "-",
+      "used_in": [
+        "C"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "Randles1947",
+        "BardFaulkner2001"
+      ],
+      "basis": "Standard equivalent circuit for a corroding electrode without diffusion."
+    },
+    "stern_geary_B_V": {
+      "value": 0.026,
+      "unit": "V",
+      "used_in": [
+        "B",
+        "D"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "SternGeary1957",
+        "AndradeAlonso2004"
+      ],
+      "basis": "B = ba*bc/(2.303(ba+bc)). 26 mV corresponds to ba = bc = 120 mV/decade and is the value Andrade and Alonso use for actively corroding steel (52 mV for passive steel). Their context is steel in concrete; it is not measured for this water."
+    },
+    "stern_geary_B_range_V": {
+      "value": [
+        0.019,
+        0.033
+      ],
+      "unit": "V",
+      "used_in": [
+        "D"
+      ],
+      "status": "ASSUMED",
+      "sources": [],
+      "basis": "Declared rectangular bound around 26 mV. Published B for steel spans roughly 13-52 mV; a measured Tafel analysis would replace this."
+    },
+    "lpr.excitation_amplitudes_V": {
+      "value": [
+        0.005,
+        0.01
+      ],
+      "unit": "V",
+      "used_in": [
+        "C",
+        "D"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "SternGeary1957",
+        "ASTM_G59",
+        "Mansfeld1976"
+      ],
+      "basis": "+-5 mV (A1, A2) and +-10 mV (B) about the open-circuit potential, inside the near-linear region the Stern-Geary approximation needs and inside the +-30 mV window of ASTM G59."
+    },
+    "rp_correction": {
+      "value": "Rp = Rapp - Ru",
+      "unit": "ohm",
+      "used_in": [
+        "D"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "Mansfeld1976",
+        "ASTM_G59",
+        "BardFaulkner2001"
+      ],
+      "basis": "The measured polarization slope includes uncompensated solution resistance, which must be subtracted."
+    },
+    "lpr.point_dwell_s": {
+      "value": 15.0,
+      "unit": "s",
+      "used_in": [
+        "C",
+        "D"
+      ],
+      "status": "ESTABLISHED_CONCEPT",
+      "sources": [
+        "BardFaulkner2001"
+      ],
+      "basis": "With Cdl = 0.8 uF the first-order cell time constant is tau = (Ru*Rp/(Ru+Rp))*Cdl = 7.3 ms, so the 15 s dwell is far longer than needed for the interface to settle (thousands of tau). The 15 s value itself is P3's engineering setting."
+    },
+    "lpr.reacquisition_dwell_s": {
+      "value": 45.0,
+      "unit": "s",
+      "used_in": [
+        "D"
+      ],
+      "status": "ENGINEERING_SETTING",
+      "sources": [],
+      "basis": "P3 config: longer observation for a slow transient; one retry maximum."
+    },
+    "lpr.max_reacquisition_attempts": {
+      "value": 1,
+      "unit": "-",
+      "used_in": [
+        "D"
+      ],
+      "status": "ENGINEERING_SETTING",
+      "sources": [],
+      "basis": "P3 config retry budget."
+    },
+    "lpr.sample_rate_hz": {
+      "value": 20.0,
+      "unit": "Hz",
+      "used_in": [
+        "C"
+      ],
+      "status": "ENGINEERING_SETTING",
+      "sources": [],
+      "basis": "Design choice. At 20 Hz the 7.3 ms interface transient is over between samples; the samples measure the settled response, which is what LPR uses."
+    },
+    "p3.settling_checks": {
+      "value": "relative slope <= 2 %, window difference <= 5 %, variation <= 25 %, >= 10 s observed",
+      "unit": "-",
+      "used_in": [
+        "D"
+      ],
+      "status": "ENGINEERING_SETTING",
+      "sources": [
+        "ASTM_G59"
+      ],
+      "basis": "Waiting for a stable potential/current before analysis is standard practice (ASTM G59 requires a stabilisation period). The numerical thresholds are Darshan's engineering settings, not from a paper."
+    },
+    "p3.fit_and_signal_thresholds": {
+      "value": "R^2 >= 0.98, SNR >= 10 dB, noise/signal <= 0.25, A1/A2 and A1/B consistency <= 15 %",
+      "unit": "-",
+      "used_in": [
+        "D"
+      ],
+      "status": "ENGINEERING_SETTING",
+      "sources": [],
+      "basis": "Darshan's quality gates; no published source for these exact values."
+    },
+    "p3.reference_rule": {
+      "value": 0.05,
+      "unit": "relative current error",
+      "used_in": [
+        "D"
+      ],
+      "status": "ENGINEERING_SETTING",
+      "sources": [],
+      "basis": "Known-resistor (dummy cell) check is standard instrument verification practice; the 5 % tolerance is an engineering setting."
+    },
+    "instrument.reference_resistor": {
+      "value": "10 kohm +- 0.1 %",
+      "unit": "ohm",
+      "used_in": [
+        "B",
+        "C"
+      ],
+      "status": "ESTABLISHED_CONCEPT",
+      "sources": [
+        "IEC60062"
+      ],
+      "basis": "0.1 % is a standard precision resistor tolerance class; the resistor is simulated, not a certified standard."
+    },
+    "instrument.tia_feedback_ohm": {
+      "value": 1000000.0,
+      "unit": "ohm",
+      "used_in": [
+        "C"
+      ],
+      "status": "ENGINEERING_SETTING",
+      "sources": [],
+      "basis": "Circuit design value for the nA-uA current range."
+    },
+    "corrosion.K": {
+      "value": 0.00327,
+      "unit": "mm g/(uA cm yr)",
+      "used_in": [
+        "D"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "ASTM_G102"
+      ],
+      "basis": "ASTM G102 corrosion-rate constant K1."
+    },
+    "corrosion.equivalent_weight_g_per_eq": {
+      "value": 27.92,
+      "unit": "g/eq",
+      "used_in": [
+        "D"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "ASTM_G102"
+      ],
+      "basis": "Iron, Fe -> Fe2+."
+    },
+    "corrosion.density_g_cm3": {
+      "value": 7.87,
+      "unit": "g/cm3",
+      "used_in": [
+        "D"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "ASTM_G102"
+      ],
+      "basis": "Iron / carbon steel."
+    },
+    "corrosion.icorr_model": {
+      "value": "icorr = B/(Rp*A)",
+      "unit": "A/cm2",
+      "used_in": [
+        "D"
+      ],
+      "status": "LITERATURE",
+      "sources": [
+        "SternGeary1957",
+        "ASTM_G102"
+      ],
+      "basis": "Stern-Geary relation; assumes uniform corrosion and activation control."
+    }
+  }
+}
